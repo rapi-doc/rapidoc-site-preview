@@ -1,0 +1,79 @@
+# RapiDoc
+
+> A web component for viewing OpenAPI 3.0, 3.1 and Swagger specifications, with an interactive console.
+
+## RapiDoc
+
+- [RapiDoc](https://rapidocui.com/docs/rapidoc.md): <rapi-doc> turns an OpenAPI spec into an interactive API reference, as one HTML element with no runtime dependencies.
+- [Authentication](https://rapidocui.com/docs/rapidoc/authentication.md): How readers give <rapi-doc> the credentials Try needs to call a protected API - API keys, HTTP Basic, bearer tokens and OAuth 2.0 - and how your page can fill them in.
+- [OAuth 2.0](https://rapidocui.com/docs/rapidoc/authentication/oauth.md): Let readers sign in with your OAuth 2.0 or OpenID Connect provider and call your API from RapiDoc, using <oauth-receiver> and vendor extensions.
+- [Links & Navigation](https://rapidocui.com/docs/rapidoc/customizing/linking.md): Element IDs, links between operations in Markdown descriptions, tag groups, URL routing and navigating from JavaScript.
+- [Markdown Headings in the Sidebar](https://rapidocui.com/docs/rapidoc/customizing/markdown-headings.md): Turn the
+- [Your Own Markup](https://rapidocui.com/docs/rapidoc/customizing/slots.md): Put your own HTML, such as a logo, banners, notices and a footer, inside <rapi-doc> with named slots.
+- [Loading Your Spec](https://rapidocui.com/docs/rapidoc/get-started/openapi-support.md): Which OpenAPI versions RapiDoc reads, the three ways to give it a spec, and how to handle CORS.
+- [Quickstart](https://rapidocui.com/docs/rapidoc/get-started/quickstart.md): Show an interactive API reference for your OpenAPI spec in one HTML file.
+- [Common Tasks](https://rapidocui.com/docs/rapidoc/guides.md): The things most RapiDoc sites need, and the page that explains each one.
+- [Export MCP Server](https://rapidocui.com/docs/rapidoc/mcp-export.md): The Export MCP Server button of <rapi-doc> and its JavaScript methods, which turn the spec on the page into an MCP server project for AI agents.
+- [Migrating from RapiDoc v10 to v11](https://rapidocui.com/docs/rapidoc/migration/v10-to-v11.md): Upgrade guide for migrating from RapiDoc v10 to v11. Learn about deprecated styling attributes, modern CSS custom properties (design tokens), and W3C CSS Shadow Parts (::part()).
+- [Migrating from RapiDoc v11 to v12](https://rapidocui.com/docs/rapidoc/migration/v11-to-v12.md): Upgrade guide for RapiDoc v12. CSS variables now follow shadcn/ui naming (including --sidebar-* for navigation), every variable has a real default, and RapiDoc renders semantic h1–h6 headings.
+- [Migrating from RapiDoc v12 to v13](https://rapidocui.com/docs/rapidoc/migration/v12-to-v13.md): Upgrade guide for RapiDoc v13. One filter-operations attribute replaces match-paths, match-type and remove-endpoints-with-badge-label-as on rapi-doc and rapi-doc-mini.
+- [Migrating from RapiDoc v13 to v14](https://rapidocui.com/docs/rapidoc/migration/v13-to-v14.md): Upgrade guide for RapiDoc v14. Nothing changes in how you use rapi-doc; v14 marks the spec loading and schema code now shared with RapiPdf.
+- [In-Browser Mock](https://rapidocui.com/docs/rapidoc/mocking/in-browser.md): Answer API requests inside the page from your OpenAPI spec with the mock-server attribute, with no server to run.
+- [Large Specs](https://rapidocui.com/docs/rapidoc/performance/large-specs.md): Keep RapiDoc fast with specs of several megabytes and thousands of operations.
+- [Render Modes](https://rapidocui.com/docs/rapidoc/performance/render-modes.md): Compare RapiDoc's read, view and focused render styles, with measured load times on large specs.
+- [React to Events](https://rapidocui.com/docs/rapidoc/programmatic-api/event-hooks.md): Change Try requests before they are sent, read responses, and react to spec loading, server changes and navigation with <rapi-doc> events.
+- [Control It from JavaScript](https://rapidocui.com/docs/rapidoc/programmatic-api/lifecycle-and-methods.md): Load specs, set credentials, select servers and navigate <rapi-doc> from JavaScript.
+- [Attributes](https://rapidocui.com/docs/rapidoc/reference.md): Every attribute of <rapi-doc>, by group, with its allowed values and default, read from the element's source.
+- [CSS Parts & Variables](https://rapidocui.com/docs/rapidoc/reference/css.md): Every CSS part and CSS custom property of <rapi-doc>, to style the inside of the element from your page.
+- [Events](https://rapidocui.com/docs/rapidoc/reference/events.md): Every event <rapi-doc> dispatches, with its detail, read from the element's source.
+- [Spec Extensions](https://rapidocui.com/docs/rapidoc/reference/extensions.md): Every vendor extension (x-*) in an OpenAPI spec that <rapi-doc> reads.
+- [Methods](https://rapidocui.com/docs/rapidoc/reference/methods.md): Every JavaScript method of the <rapi-doc> element, read from the element's source.
+- [Slots](https://rapidocui.com/docs/rapidoc/reference/slots.md): Every slot of <rapi-doc>, where your own markup can go, read from the element's source.
+- [Styling with CSS](https://rapidocui.com/docs/rapidoc/theming/css-parts.md): Style any element inside RapiDoc's Shadow DOM with CSS custom properties and ::part() selectors, with recipes.
+- [Theming Overview](https://rapidocui.com/docs/rapidoc/theming/overview.md): Change RapiDoc's colors, light and dark mode, corner radius, size and fonts with a few attributes and CSS variables.
+- [Built-in Themes](https://rapidocui.com/docs/rapidoc/theming/prebuilt-themes.md): RapiDoc's six built-in themes (Ember, Carbon, Cobalt, Jade, Indigo, Amber), each with a dark and a light palette, plus custom brand colors and automatic OS switching.
+- [Documentation](https://rapidocui.com/docs.md): The documentation of every RapiDoc product, tool and integration - RapiDoc, RapiDoc Mini, RapiFlow, RapiPdf, RapiMock, RapiDoc Portal, the CLI, MCP, pre-rendering - and which package you need.
+
+## RapiDoc Mini
+
+- [RapiDoc Mini](https://rapidocui.com/docs/rapidoc-mini.md): Embed one endpoint, or a few, with its Try console in a blog post, tutorial or changelog, using <rapi-doc-mini>.
+- [Recipes](https://rapidocui.com/docs/rapidoc-mini/recipes.md): Ways to use <rapi-doc-mini> - several endpoints, an expanded layout, endpoints from two APIs, an API key, an operation shown from a script, and a mini next to an Arazzo workflow.
+- [API Reference](https://rapidocui.com/docs/rapidoc-mini/reference.md): Every attribute, method and event of <rapi-doc-mini>, read from the element's source.
+
+## RapiPdf
+
+- [RapiPdf](https://rapidocui.com/docs/rapipdf.md): Turn an OpenAPI 3.x or Swagger 2.0 spec into a PDF reference in the browser with the <rapi-pdf> element, and choose what goes in it.
+- [RapiPdf in Node](https://rapidocui.com/docs/rapipdf/node.md): Make the RapiPdf PDF of an OpenAPI spec in Node with generatePdf() of rapipdf/node, for a build step that publishes it next to your docs.
+- [API Reference](https://rapidocui.com/docs/rapipdf/reference.md): Every attribute, method and event of <rapi-pdf>, read from the element's source.
+
+## RapiDoc CLI
+
+- [RapiDoc CLI](https://rapidocui.com/docs/cli.md): The rapidoc command (@rapidoc/cli) previews, validates, lints and bundles OpenAPI specs, writes them as PDFs, mocks them and turns them into MCP servers.
+- [rapidoc bundle](https://rapidocui.com/docs/cli/bundle.md): Join an OpenAPI spec split over several files into one document, or dereference it, for tools that can't follow $refs to other files.
+- [rapidoc lint](https://rapidocui.com/docs/cli/lint.md): Check that a valid OpenAPI spec also makes a good reference: operationIds, summaries, examples, declared tags and security.
+- [rapidoc mcp](https://rapidocui.com/docs/cli/mcp.md): Turn an OpenAPI spec into an MCP server for AI agents: export the project or serve it over stdio.
+- [rapidoc mock](https://rapidocui.com/docs/cli/mock.md): Serve an API from its OpenAPI spec, with example or generated responses, request validation and token checks.
+- [rapidoc pdf](https://rapidocui.com/docs/cli/pdf.md): Write the API reference of an OpenAPI spec as a PDF, with your title, colors, fonts and labels.
+- [rapidoc preview](https://rapidocui.com/docs/cli/preview.md): Show an OpenAPI spec in <rapi-doc> while you edit it, reloading on every change.
+- [All Commands & Options](https://rapidocui.com/docs/cli/reference.md): Every rapidoc command and option, the questions it asks, its exit codes and the packages each command needs.
+- [rapidoc validate](https://rapidocui.com/docs/cli/validate.md): Check an OpenAPI spec strictly against the specification, with file, line and column for each error, in CI too.
+
+## MCP Server
+
+- [MCP Server](https://rapidocui.com/docs/mcp.md): How RapiDoc turns an OpenAPI spec into a curated Model Context Protocol (MCP) server for AI agents - which operations become tools, and the manifest.
+- [Export and Run the Server](https://rapidocui.com/docs/mcp/server.md): Create the MCP server from <rapi-doc>, the command line or Node, what the exported project holds, how it runs, and how to connect an AI app to it.
+
+## Pre-rendering
+
+- [Pre-rendering](https://rapidocui.com/docs/prerender.md): Render a RapiDoc API reference to HTML at build time with @rapidoc/prerender: Declarative Shadow DOM that shows before any JavaScript runs, and that search engines can read.
+
+## Integrations
+
+- [Integrations](https://rapidocui.com/docs/integrations.md): Which RapiDoc integration to use for your front-end framework, server framework or documentation site.
+- [Build an Integration](https://rapidocui.com/docs/integrations/build-your-own.md): Write a RapiDoc plugin for a web framework, a documentation site or another tool, in any language.
+- [Documentation Sites](https://rapidocui.com/docs/integrations/docs-sites.md): Add RapiDoc API reference pages to a Starlight, VitePress or Docusaurus site, with the API's operations in the site's sidebar.
+- [ASP.NET Core](https://rapidocui.com/docs/integrations/dotnet.md): Serve a RapiDoc API reference from an ASP.NET Core app with the RapiDoc.AspNetCore NuGet package.
+- [Front-End Frameworks](https://rapidocui.com/docs/integrations/front-end.md): Use <rapi-doc>, <rapi-doc-mini> and <rapi-flow> in React, Next.js, Vue, Nuxt, Angular, Svelte and Astro, with types for their attributes.
+- [Go](https://rapidocui.com/docs/integrations/go.md): Serve a RapiDoc API reference from a Go app with github.com/rapi-doc/rapidoc-go, a net/http handler with no dependencies.
+- [Hono, Express & Fastify](https://rapidocui.com/docs/integrations/node.md): Serve a RapiDoc API reference from a Hono, Express or Fastify app with @rapidoc/hono, @rapidoc/express and @rapidoc/fastify.
+- [FastAPI & Starlette](https://rapidocui.com/docs/integrations/python.md): Serve a RapiDoc API reference from a FastAPI or Starlette app with the rapidoc package from PyPI.

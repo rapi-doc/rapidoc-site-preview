@@ -1,0 +1,16 @@
+# Slots
+
+> Every slot of <rapi-doc>, where your own markup can go, read from the element's source.
+
+Put your own markup inside `<rapi-doc>` with a `slot` attribute, and it shows at that place in the element. How to use them is in [Your Own Markup](/docs/rapidoc/customizing/slots/).
+
+```html
+<rapi-doc spec-url="https://rapidocui.com/specs/petstore.yaml">
+  <img slot="nav-logo" src="/logo.svg" alt="Acme" height="32" />
+  <p slot="auth">Get a key from the developer console.</p>
+</rapi-doc>
+```
+
+<ElementReference tag="rapi-doc" section="filter" jumps={false} placeholder="Filter the slots of <rapi-doc>" />
+
+<ElementReference tag="rapi-doc" section="slots" />

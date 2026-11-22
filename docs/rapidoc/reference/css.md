@@ -1,0 +1,17 @@
+# CSS Parts & Variables
+
+> Every CSS part and CSS custom property of <rapi-doc>, to style the inside of the element from your page.
+
+How to use them, with recipes, is in [Styling with CSS](/docs/rapidoc/theming/css-parts/).
+
+## CSS parts
+
+Style the inside of the element from your page with `rapi-doc::part(name)`.
+
+<CssPartsCatalog />
+
+## CSS custom properties
+
+Set on `rapi-doc` (or an ancestor) to change colors, fonts and sizes.
+
+<CssVariablesCatalog />

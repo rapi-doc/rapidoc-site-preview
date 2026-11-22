@@ -1,0 +1,877 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"><title>Interactive OpenAPI Spec Sandbox &amp; Live Editor | RapiDoc</title><meta name="description" content="Test, edit, and preview OpenAPI 3.x and Swagger 2.0 specs live in your browser using RapiDoc. Upload local files, toggle render styles, and live edit YAML/JSON."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://rapidocui.com/sandbox/"><meta property="og:title" content="Interactive OpenAPI Spec Sandbox &amp; Live Editor | RapiDoc"><meta property="og:description" content="Test, edit, and preview OpenAPI 3.x and Swagger 2.0 specs live in your browser using RapiDoc. Upload local files, toggle render styles, and live edit YAML/JSON."><meta property="og:type" content="website"><!-- Google Analytics - START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-M9TPKERDJ6"></script><script>(function(){const gtagId = "G-M9TPKERDJ6";
+const pageTitle = "Interactive OpenAPI Spec Sandbox & Live Editor | RapiDoc";
+const contentGroup = undefined;
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var config = {};
+  if (pageTitle) {
+    config.page_title = pageTitle;
+  }
+  if (contentGroup) {
+    config.content_group = contentGroup;
+  }
+  gtag('config', gtagId, config);
+})();</script><!-- Google Analytics - END --><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet"><script type="module" src="/assets/rapidoc-min.js"></script><link rel="stylesheet" href="/_rapidoc/assets/GoogleAnalytics.C5odW2gp.css"><link rel="stylesheet" href="/_rapidoc/assets/sandbox.CSqCjLQw.css"><link rel="stylesheet" href="/_rapidoc/assets/RapidocTuner.Cdfu-WWW.css"><script type="module" src="/_rapidoc/assets/cNngjUgL.js"></script></head><body><!-- Minimal Floating Bar --><nav class="dr-floating-bar" id="dr-floating-bar" aria-label="Sandbox controls"><!-- 1. Editor --><button type="button" class="dr-btn dr-btn-accent" id="dr-btn-editor" title="Open Spec Editor (Shortcut: E)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M230.14,70.54,185.46,25.85a20,20,0,0,0-28.29,0L33.86,149.17A19.85,19.85,0,0,0,28,163.31V208a20,20,0,0,0,20,20H92.69a19.86,19.86,0,0,0,14.14-5.86L230.14,98.82a20,20,0,0,0,0-28.28ZM91,204H52V165l84-84,39,39ZM192,103,153,64l18.34-18.34,39,39Z"/></svg><span>Editor</span></button><!-- 2. Upload --><label class="dr-btn" title="Upload local .yaml or .json spec file"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M228,144v64a12,12,0,0,1-12,12H40a12,12,0,0,1-12-12V144a12,12,0,0,1,24,0v52H204V144a12,12,0,0,1,24,0ZM96.49,80.49,116,61v83a12,12,0,0,0,24,0V61l19.51,19.52a12,12,0,1,0,17-17l-40-40a12,12,0,0,0-17,0l-40,40a12,12,0,1,0,17,17Z"/></svg><span>Upload</span><input type="file" id="dr-file-input" accept=".yaml,.yml,.json" style="display: none;"></label><!-- 3. Tuner --><button type="button" class="dr-btn" id="dr-btn-tuner" title="Open RapiDoc Tuner (Shortcut: Cmd+K)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M40,92H70.06a36,36,0,0,0,67.88,0H216a12,12,0,0,0,0-24H137.94a36,36,0,0,0-67.88,0H40a12,12,0,0,0,0,24Zm64-24A12,12,0,1,1,92,80,12,12,0,0,1,104,68Zm112,96H201.94a36,36,0,0,0-67.88,0H40a12,12,0,0,0,0,24h94.06a36,36,0,0,0,67.88,0H216a12,12,0,0,0,0-24Zm-48,24a12,12,0,1,1,12-12A12,12,0,0,1,168,188Z"/></svg><span>Tuner</span></button><!-- 4. Home --><a href="/" class="dr-btn dr-btn-icon" title="Return to Home page"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M222.14,105.85l-80-80a20,20,0,0,0-28.28,0l-80,80A19.86,19.86,0,0,0,28,120v96a12,12,0,0,0,12,12h64a12,12,0,0,0,12-12V164h24v52a12,12,0,0,0,12,12h64a12,12,0,0,0,12-12V120A19.86,19.86,0,0,0,222.14,105.85ZM204,204H164V152a12,12,0,0,0-12-12H104a12,12,0,0,0-12,12v52H52V121.65l76-76,76,76Z"/></svg></a></nav><!-- RapiDoc Element --><rapi-doc id="thedoc" spec-url="/specs/sandbox.yaml" color-scheme="dark" theme="ember" render-style="read" schema-style="table" default-schema-tab="example" show-header="false" show-info="true" allow-authentication="true" allow-server-selection="true" allow-try="true" sort-endpoints-by="path"></rapi-doc><!-- Pretty RapiDoc Tuner Drawer --><div class="rd-pretty-controller-root" id="rd-pretty-thedoc-28kgy" data-target="thedoc" data-initial-attrs="{&quot;color-scheme&quot;:&quot;dark&quot;,&quot;theme&quot;:&quot;ember&quot;,&quot;render-style&quot;:&quot;read&quot;,&quot;schema-style&quot;:&quot;table&quot;,&quot;default-schema-tab&quot;:&quot;example&quot;,&quot;show-header&quot;:&quot;false&quot;,&quot;show-info&quot;:&quot;true&quot;,&quot;allow-authentication&quot;:&quot;true&quot;,&quot;allow-server-selection&quot;:&quot;true&quot;,&quot;allow-try&quot;:&quot;true&quot;,&quot;sort-endpoints-by&quot;:&quot;path&quot;}" data-default-open="false" style="--rd-ctrl-font-size: 13px;"><!-- Docked Right Edge Tab Button --><!-- Modern Overlapping Layer Drawer with Frosted Glass --><aside class="rd-pretty-drawer" aria-label="RapiDoc Tuner" aria-hidden="true"><div class="rd-pretty-wrapper"><!-- Section Header --><div class="rd-pretty-header"><div class="rd-pretty-title-wrap"><div><div class="rd-title-with-badge"><h3 class="rd-pretty-title">RapiDoc Tuner</h3></div><p class="rd-pretty-subtitle">RapiDoc properties</p></div></div><div class="rd-pretty-header-actions"><!-- Reset Button --><button type="button" class="rd-pretty-action-btn rd-pretty-reset-btn" title="Reset all options to default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M228,128a100,100,0,0,1-98.66,100H128a99.39,99.39,0,0,1-68.62-27.29,12,12,0,0,1,16.48-17.45,76,76,0,1,0-1.57-109c-.13.13-.25.25-.39.37L54.89,92H72a12,12,0,0,1,0,24H24a12,12,0,0,1-12-12V56a12,12,0,0,1,24,0V76.72L57.48,57.06A100,100,0,0,1,228,128Z"/></svg><span>Reset</span></button><!-- Close Drawer Button --><button type="button" class="rd-pretty-action-btn rd-pretty-close-btn" aria-label="Close Controls Drawer" title="Close Drawer (Esc)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div></div><!-- Scrollable Drawer Body with Fluid Cards --><div class="rd-pretty-body"><div class="rd-pretty-category-section" data-category="Theme"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Theme</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="color-scheme"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">color-scheme</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About color-scheme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Base color scheme mode. 'system' automatically matches the user's OS preference. 'auto' follows
+the host page: it reads the page's CSS <code>color-scheme</code> (for example
+<code>:root[data-theme='light'] { color-scheme: light }</code>, as Starlight sets it) and
+updates when the page switches theme; when the page declares none, it falls back to the OS
+preference.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>dark</code></span></span></span></div><div class="rd-option-tip">Dark, light, or follow the system or the page</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="color-scheme"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_color-scheme" class="rd-radio-input" data-attr="color-scheme" value="dark" data-is-default="true"><span class="chip-text">dark</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_color-scheme" class="rd-radio-input" data-attr="color-scheme" value="light"><span class="chip-text">light</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_color-scheme" class="rd-radio-input" data-attr="color-scheme" value="system"><span class="chip-text">system</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_color-scheme" class="rd-radio-input" data-attr="color-scheme" value="auto"><span class="chip-text">auto</span></label></div></div><div class="rd-option-card rd-option-card--multi" data-control-attr="theme"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">theme</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About theme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Brand color preset, or a custom brand color as a hex code. Each preset defines a dark and a
+light palette.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>amber</code></span></span></span></div><div class="rd-option-tip">Color palette preset</div></div><div class="rd-control-wrapper rd-chip-group" role="radiogroup" aria-label="theme"><label class="rd-chip rd-chip--color" style="--chip-color: #f76b39; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="ember"><span class="chip-text">ember</span></label><label class="rd-chip rd-chip--color" style="--chip-color: #a1a1aa; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="carbon"><span class="chip-text">carbon</span></label><label class="rd-chip rd-chip--color" style="--chip-color: #7aa2d6; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="cobalt"><span class="chip-text">cobalt</span></label><label class="rd-chip rd-chip--color" style="--chip-color: #00d390; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="jade"><span class="chip-text">jade</span></label><label class="rd-chip rd-chip--color" style="--chip-color: #818cf8; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="indigo"><span class="chip-text">indigo</span></label><label class="rd-chip rd-chip--color rd-chip--default" style="--chip-color: #f6a821; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="amber" data-is-default="true"><span class="chip-text">amber</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip rd-chip--color" style="--chip-color: #8EA66B; --chip-text: #000;"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_theme" class="rd-radio-input" data-attr="theme" value="#8EA66B"><span class="chip-text">#8EA66B</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="radius"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">radius</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About radius"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Corner radius scale applied across cards, buttons, badges, inputs, and dialogs.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>sm</code></span></span></span></div><div class="rd-option-tip">Border radius for cards, inputs, and buttons</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="radius"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_radius" class="rd-radio-input" data-attr="radius" value="none"><span class="chip-text">none</span></label><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_radius" class="rd-radio-input" data-attr="radius" value="sm" data-is-default="true"><span class="chip-text">sm</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_radius" class="rd-radio-input" data-attr="radius" value="md"><span class="chip-text">md</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_radius" class="rd-radio-input" data-attr="radius" value="lg"><span class="chip-text">lg</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_radius" class="rd-radio-input" data-attr="radius" value="full"><span class="chip-text">full</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="scale"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">scale</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About scale"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Relative scale factor for typography and UI elements across the documentation portal.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>default</code></span></span></span></div><div class="rd-option-tip">Global scale for typography and spacing</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="scale"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_scale" class="rd-radio-input" data-attr="scale" value="sm"><span class="chip-text">sm</span></label><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_scale" class="rd-radio-input" data-attr="scale" value="default" data-is-default="true"><span class="chip-text">default</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_scale" class="rd-radio-input" data-attr="scale" value="lg"><span class="chip-text">lg</span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Layout &amp; Scrolling"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Layout &amp; Scrolling</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="render-style"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">render-style</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About render-style"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls the overall documentation presentation layout. Three distinct modes are supported:
+<ul> <li> <span class="yellow">view</span>: Optimized for interactive exploration with
+collapsible operations | <a href="/examples/render-view">Example</a> </li> <li> <span
+class="yellow">read</span>: Continuous narrative page layout, ideal for reading through API
+specifications from top to bottom | <a href="/examples/render-read">Example</a> </li> <li>
+<span class="yellow">focused</span>: Displays a single endpoint at a time with a dedicated
+sidebar, ideal for large enterprise schemas | <a href="/examples/render-focused">Example</a>
+</li> </ul></span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>read</code></span></span></span></div><div class="rd-option-tip">Display mode: Read for docs, View with tabs, Focused for single endpoint</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="render-style"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_render-style" class="rd-radio-input" data-attr="render-style" value="read" data-is-default="true"><span class="chip-text">read</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_render-style" class="rd-radio-input" data-attr="render-style" value="view"><span class="chip-text">view</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_render-style" class="rd-radio-input" data-attr="render-style" value="focused"><span class="chip-text">focused</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="layout"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">layout</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About layout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls the multi-column orientation of request parameters and response panels on desktop
+screens (>768px). In 'row' layout, request and response sections sit side-by-side; in 'column'
+layout, they stack vertically. Defaults to 'column' when render-style is 'read' or 'focused',
+and 'row' when render-style is 'view'.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>column (read, focused) / row (view)</code></span></span></span></div><div class="rd-option-tip">Request and response layout: row (side-by-side) or column (stacked)</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="layout"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_layout" class="rd-radio-input" data-attr="layout" value="row"><span class="chip-text">row</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_layout" class="rd-radio-input" data-attr="layout" value="column"><span class="chip-text">column</span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Schemas"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Schemas</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="schema-style"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">schema-style</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About schema-style"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls the visual representation of complex JSON schemas in request and response panels.
+'tree' provides an interactive collapsible tree view; 'table' renders structured tabular rows.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>tree</code></span></span></span></div><div class="rd-option-tip">Display schemas as visual table or tree hierarchy</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="schema-style"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-style" class="rd-radio-input" data-attr="schema-style" value="tree" data-is-default="true"><span class="chip-text">tree</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-style" class="rd-radio-input" data-attr="schema-style" value="table"><span class="chip-text">table</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="default-schema-tab"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">default-schema-tab</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About default-schema-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Selects which tab is active by default, and listed first, for request bodies, responses and
+object parameters: 'schema' (data contract model) or 'example' (sample JSON payload).</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>example</code></span></span></span></div><div class="rd-option-tip">Default active tab in request and response bodies</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="default-schema-tab"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_default-schema-tab" class="rd-radio-input" data-attr="default-schema-tab" value="schema"><span class="chip-text">schema</span></label><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_default-schema-tab" class="rd-radio-input" data-attr="default-schema-tab" value="example" data-is-default="true"><span class="chip-text">example</span><span class="rd-sr-only"> (default)</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="schema-expand-level"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">schema-expand-level</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About schema-expand-level"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Initial depth level for auto-expanding complex nested schema properties and sub-objects (the
+default expands all levels).</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>99999</code></span></span></span></div><div class="rd-option-tip">Initial expansion depth for nested schemas</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="schema-expand-level"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-expand-level" class="rd-radio-input" data-attr="schema-expand-level" value="1"><span class="chip-text">1</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-expand-level" class="rd-radio-input" data-attr="schema-expand-level" value="2"><span class="chip-text">2</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-expand-level" class="rd-radio-input" data-attr="schema-expand-level" value="3"><span class="chip-text">3</span></label><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-expand-level" class="rd-radio-input" data-attr="schema-expand-level" value="99999" data-is-default="true"><span class="chip-text">99999</span><span class="rd-sr-only"> (default)</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="schema-hide-read-only"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">schema-hide-read-only</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About schema-hide-read-only"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">'default' hides read-only properties in request bodies while displaying them in response models
+and webhook callbacks. Set to 'never' to always display read-only fields across all payloads.
+<span class="orange">Note: This does not affect example generation.</span></span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>default</code></span></span></span></div><div class="rd-option-tip">Hide read-only fields from request body schemas</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="schema-hide-read-only"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-hide-read-only" class="rd-radio-input" data-attr="schema-hide-read-only" value="default" data-is-default="true"><span class="chip-text">default</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-hide-read-only" class="rd-radio-input" data-attr="schema-hide-read-only" value="never"><span class="chip-text">never</span></label></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="schema-hide-write-only"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">schema-hide-write-only</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About schema-hide-write-only"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">'default' hides write-only properties in response bodies while displaying them in request
+payloads. Set to 'never' to always display write-only fields across all payloads. <span
+class="orange">Note: This does not affect example generation.</span></span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>default</code></span></span></span></div><div class="rd-option-tip">Hide write-only fields from response body schemas</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="schema-hide-write-only"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-hide-write-only" class="rd-radio-input" data-attr="schema-hide-write-only" value="default" data-is-default="true"><span class="chip-text">default</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_schema-hide-write-only" class="rd-radio-input" data-attr="schema-hide-write-only" value="never"><span class="chip-text">never</span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="schema-description-expanded"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">schema-description-expanded</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About schema-description-expanded"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls whether schema field constraints, validation rules, and descriptions are fully
+expanded by default or collapsed to a single line.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Display full multiline schema property descriptions by default</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="schema-description-expanded"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-schema-description-expand-toggle"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-schema-description-expand-toggle</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-schema-description-expand-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Shows or hides the button allowing users to toggle between single-line summary and multi-line
+detailed schema property descriptions.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Show toggle button for multiline schema descriptions</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-schema-description-expand-toggle" data-default-on="true"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Authentication"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Authentication</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-authentication"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-authentication</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-authentication"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls the display of interactive authentication controls (HTTP Basic, Bearer Token, API Key,
+OAuth2). Disable to hide authentication dialogs when using hardcoded or pre-authenticated API
+keys.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Show the authentication controls</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-authentication" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="persist-auth"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">persist-auth</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About persist-auth"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Keeps API keys, bearer tokens and OAuth access tokens in localStorage across page reloads; an
+OAuth token is dropped once it expires. Basic credentials and OAuth client secrets are never
+stored.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Persist API keys and tokens in browser localStorage</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="persist-auth"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Try &amp; Servers"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Try &amp; Servers</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="allow-try"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-try</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-try"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables the interactive "TRY" console allowing users to test live API calls directly from their
+browser. Besides <span class="mono yellow">true</span> and <span class="mono
+yellow">false</span>, it takes the terms of <span class="mono yellow">filter-operations</span>
+to turn Try on only for the operations they select: <span class="mono yellow">!deprecated
+!tag:pending-implementation</span> keeps it off for deprecated operations and those tagged
+pending-implementation. The others keep their request documentation and show a disabled TRY
+DISABLED button. The Authentication section stays usable unless it is <span class="mono
+yellow">false</span>.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Live interactive endpoint testing console</div></div><div class="rd-control-wrapper rd-select-wrap"><select class="rd-select-input" data-attr="allow-try" aria-label="allow-try"><option value="true" data-attr="allow-try" data-is-default="true">true •</option><option value="false" data-attr="allow-try">false</option><option value="!deprecated" data-attr="allow-try">!deprecated</option><option value="!deprecated !badge:Beta" data-attr="allow-try">!deprecated !badge:Beta</option></select></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="fill-request-fields-with-example"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">fill-request-fields-with-example</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About fill-request-fields-with-example"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Pre-populates interactive request parameter inputs and request body fields using example values
+defined in the OpenAPI spec.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Pre-populate &quot;Try&quot; console parameters with sample values</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="fill-request-fields-with-example" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="show-curl-before-try"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-curl-before-try</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-curl-before-try"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">When set to <span class="mono fg-color">true</span>, generates and displays copyable cURL
+commands directly within the endpoint documentation prior to clicking "TRY".</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Display cURL command before invoking API</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="show-curl-before-try"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-server-selection"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-server-selection</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-server-selection"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables the dropdown allowing users to switch between target servers declared in the OpenAPI
+spec.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Allow switching between configured API server URLs</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-server-selection" data-default-on="true"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Mock Server"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Mock Server</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="mock-server"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">mock-server</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About mock-server"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables the built-in, zero-dependency in-browser mock server. Transparently intercepts outgoing
+network requests (both RapiDoc's Try console and host application fetch/XHR calls) and serves
+mock responses based on OpenAPI examples or generated from schemas.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Answer Try requests from the in-browser mock server</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="mock-server"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="MCP"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">MCP</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="mcp"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">mcp</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About mcp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables Model Context Protocol (MCP) server export for AI agents. <span class="mono
+fg-color">true</span> renders an <span class="mono fg-color">Export MCP Server</span> button in
+the overview section that downloads a zip with the MCP manifest (<span class="mono
+fg-color">manifest.json</span>), a fixed runtime (<span class="mono
+fg-color">runtime.js</span>) and a stdio TypeScript server (<span class="mono
+fg-color">server.ts</span>). <span class="mono fg-color">false</span>, <span class="mono
+fg-color">none</span> or an empty value hides the button.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Shows the Export MCP Server button</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="mcp"><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_mcp" class="rd-radio-input" data-attr="mcp" value="true"><span class="chip-text">true</span></label><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_mcp" class="rd-radio-input" data-attr="mcp" value="false" data-is-default="true"><span class="chip-text">false</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_mcp" class="rd-radio-input" data-attr="mcp" value="none"><span class="chip-text">none</span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Sidebar &amp; Navigation"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Sidebar &amp; Navigation</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="show-method-in-nav-bar"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-method-in-nav-bar</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-method-in-nav-bar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Displays HTTP methods (GET, POST, etc.) alongside endpoint items in the navigation sidebar.
+Ensure sufficient contrast if customizing nav-bg-color.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Sidebar HTTP method badge presentation style</div></div><div class="rd-control-wrapper rd-select-wrap"><select class="rd-select-input" data-attr="show-method-in-nav-bar" aria-label="show-method-in-nav-bar"><option value="false" data-attr="show-method-in-nav-bar" data-is-default="true">false •</option><option value="as-plain-text" data-attr="show-method-in-nav-bar">as-plain-text</option><option value="as-colored-text" data-attr="show-method-in-nav-bar">as-colored-text</option><option value="as-colored-block" data-attr="show-method-in-nav-bar">as-colored-block</option></select></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="show-badges-in-nav-bar"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-badges-in-nav-bar</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-badges-in-nav-bar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Marks sidebar items whose operation shows a badge (<span class="mono yellow">x-badges</span>,
+or an OpenAPI 3.2 tag of kind: badge) with a small dot in the first badge's color; its tooltip
+and accessible label list the badges. Badges with <span class="mono yellow">color: none</span>
+are left out. The dot's shape and size can be styled with the <span class="mono
+yellow">nav-badge-dot</span> CSS part.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>dot</code></span></span></span></div><div class="rd-option-tip">Dot on sidebar items with badges</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="show-badges-in-nav-bar"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_show-badges-in-nav-bar" class="rd-radio-input" data-attr="show-badges-in-nav-bar" value="dot" data-is-default="true"><span class="chip-text">dot</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_show-badges-in-nav-bar" class="rd-radio-input" data-attr="show-badges-in-nav-bar" value="false"><span class="chip-text">false</span></label></div></div><div class="rd-option-card rd-option-card--multi" data-control-attr="nav-item-spacing"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">nav-item-spacing</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About nav-item-spacing"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Controls vertical density and padding between sidebar navigation items.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>default</code></span></span></span></div><div class="rd-option-tip">Vertical spacing between sidebar navigation items</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="nav-item-spacing"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_nav-item-spacing" class="rd-radio-input" data-attr="nav-item-spacing" value="default" data-is-default="true"><span class="chip-text">default</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_nav-item-spacing" class="rd-radio-input" data-attr="nav-item-spacing" value="compact"><span class="chip-text">compact</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_nav-item-spacing" class="rd-radio-input" data-attr="nav-item-spacing" value="relaxed"><span class="chip-text">relaxed</span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="use-path-in-nav-bar"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">use-path-in-nav-bar</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About use-path-in-nav-bar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Displays raw API URL paths in the navigation bar instead of operation summaries. <div
+class="orange"> <span class="bold yellow-dim">NOTE: </span> Setting this to <span class="mono
+yellow">true</span> displays the path only. To display the HTTP method alongside the path, also
+configure <span class="mono yellow">show-method-in-nav-bar</span>. </div></span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Show URL paths instead of summaries in the sidebar</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="use-path-in-nav-bar"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="info-description-headings-in-navbar"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">info-description-headings-in-navbar</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About info-description-headings-in-navbar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Extracts Markdown headings (H1 and H2) from the specification's info description and adds them
+to the sidebar navigation menu (read mode only).</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Extract H1 and H2 markdown headings into sidebar navigation</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="info-description-headings-in-navbar"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="update-route"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">update-route</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About update-route"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">When set to "true", automatically updates the browser's URL address hash as the user scrolls
+through or clicks on different sections.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Update browser URL hash when navigating endpoints</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="update-route" data-default-on="true"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Header &amp; Sections"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Header &amp; Sections</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="heading-text"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">heading-text</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About heading-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Custom title text displayed on the top-left corner of the header.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>(empty)</code></span></span></span></div><div class="rd-option-tip">Top header title text</div></div><div class="rd-control-wrapper rd-chip-group rd-chip-bar" role="radiogroup" aria-label="heading-text"><label class="rd-chip rd-chip--default"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_heading-text" class="rd-radio-input" data-attr="heading-text" value data-is-default="true"><span class="chip-text">default</span><span class="rd-sr-only"> (default)</span></label><label class="rd-chip"><input type="radio" name="rd_rd-pretty-thedoc-28kgy_heading-text" class="rd-radio-input" data-attr="heading-text" value="API Explorer"><span class="chip-text">API Explorer</span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="show-header"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-header</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Toggles the top navigation header bar. Set to <span class="mono fg-color">false</span> to
+prevent users from loading alternative spec URLs or to seamlessly embed inside existing
+layouts.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Display the top navbar header</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="show-header" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="show-info"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-info</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Toggles visibility of the OpenAPI document info section (title, description, version, terms of
+service). Useful when embedding `<rapi-doc>` into an existing developer portal or knowledge
+base that already contains its own header.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Display OpenAPI document title and overview info</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="show-info" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-search"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-search</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables the instant search and filtering input in the navigation sidebar.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Enable quick endpoint search bar</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-search" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-advanced-search"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-advanced-search</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-advanced-search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Enables deep multi-property search modal, indexing paths, descriptions, parameter names, and
+response schemas.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Enable advanced full-text schema and parameter search</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-advanced-search" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="show-components"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">show-components</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About show-components"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Toggles the components section (schemas, responses, examples, request bodies, headers, security
+schemes) in both the document body and sidebar menu (available in focused render-style).</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Show the components section</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="show-components"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-spec-url-load"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-spec-url-load</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-spec-url-load"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">When set to <span class="mono fg-color">false</span>, disables the input field allowing users
+to load arbitrary external OpenAPI specification URLs.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Allow loading arbitrary OpenAPI spec by URL</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-spec-url-load" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-spec-file-load"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-spec-file-load</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-spec-file-load"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">When set to <span class="mono fg-color">false</span>, hides the file picker allowing users to
+upload and preview local OpenAPI spec files (desktop viewports >768px).</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>true</code></span></span></span></div><div class="rd-option-tip">Allow uploading and viewing local OpenAPI spec file</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-spec-file-load" data-default-on="true"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="allow-spec-file-download"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">allow-spec-file-download</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About allow-spec-file-download"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">When set to <span class="mono fg-color">true</span>, displays convenient buttons in the
+overview section to download the raw OpenAPI specification file or view it in a new tab.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Show download button for the active OpenAPI spec</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="allow-spec-file-download"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section" data-category="Fonts"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Fonts</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="regular-font"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">--font-sans</div></div><div class="rd-option-tip">Main document body and heading font family</div></div><div class="rd-control-wrapper rd-select-wrap"><select class="rd-select-input" data-attr="regular-font" aria-label="--font-sans"><option value data-attr="regular-font" data-is-default="true">default •</option><option value="Inter, sans-serif" data-attr="regular-font" data-font-css="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">Inter</option><option value="'IBM Plex Sans', sans-serif" data-attr="regular-font" data-font-css="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">IBM Plex Sans</option><option value="'Source Sans 3', sans-serif" data-attr="regular-font" data-font-css="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap">Source Sans 3</option><option value="Nunito" data-attr="regular-font">Nunito</option><option value="Roboto Mono" data-attr="regular-font">Roboto Mono</option></select></div></div><div class="rd-option-card rd-option-card--multi rd-option-card--inline" data-control-attr="mono-font"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">--font-mono</div></div><div class="rd-option-tip">Monospace font family for code blocks and schema types</div></div><div class="rd-control-wrapper rd-select-wrap"><select class="rd-select-input" data-attr="mono-font" aria-label="--font-mono"><option value data-attr="mono-font" data-is-default="true">default •</option><option value="'JetBrains Mono', monospace" data-attr="mono-font" data-font-css="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap">JetBrains Mono</option><option value="'IBM Plex Mono', monospace" data-attr="mono-font" data-font-css="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap">IBM Plex Mono</option><option value="'Source Code Pro', monospace" data-attr="mono-font" data-font-css="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&amp;display=swap">Source Code Pro</option><option value="Courier" data-attr="mono-font">Courier</option></select></div></div></div></div><div class="rd-pretty-category-section rd-pretty-slots-section" data-category="slots"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Slots</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--boolean" data-control-slot="nav-logo"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">slot="nav-logo"</div></div><div class="rd-option-tip">Inject custom logo & text HTML into sidebar navigation</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-pretty-slot-input" data-slot="nav-logo"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean" data-control-slot="fixed-header"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">slot="fixed-header"</div></div><div class="rd-option-tip">Inject custom sticky announcement or banner HTML above content</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-pretty-slot-input" data-slot="fixed-header"><span class="rd-slider"></span></label></div></div><div class="rd-option-card rd-option-card--boolean" data-control-slot="default"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">slot="(default)"</div></div><div class="rd-option-tip">Inject custom top-level announcement HTML into main content body</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-pretty-slot-input" data-slot="default"><span class="rd-slider"></span></label></div></div></div></div><div class="rd-pretty-category-section rd-pretty-methods-section" data-category="methods"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Methods & Actions</span></div><div class="rd-pretty-settings-list"><!-- loadSpec --><div class="rd-option-card rd-option-card--multi" data-method="loadSpec"><div class="rd-option-info"><div class="rd-option-label">loadSpec(spec)</div><div class="rd-option-tip">Switch the active OpenAPI specification document</div></div><div class="rd-control-wrapper rd-chip-group"><button type="button" class="rd-chip rd-method-spec-btn is-active" data-spec-url="/specs/petstore.yaml" title="loadSpec('/specs/petstore.yaml')"><span class="chip-text">petstore.yaml</span></button><button type="button" class="rd-chip rd-method-spec-btn" data-spec-url="/specs/open-api-3-1.yaml" title="loadSpec('/specs/open-api-3-1.yaml')"><span class="chip-text">open-api-3-1.yaml</span></button></div></div><!-- scrollTo --><div class="rd-option-card rd-option-card--multi" data-method="scrollTo"><div class="rd-option-info"><div class="rd-option-label">scrollToPath(path)</div><div class="rd-option-tip">Smoothly scroll to an endpoint or section ID</div></div><div class="rd-method-input-row"><input type="text" class="rd-method-input rd-scroll-path-input" value="get-/user/login" placeholder="e.g. get-/user/login" aria-label="Path to scroll to" spellcheck="false"><button type="button" class="rd-pretty-action-btn rd-scroll-exec-btn"><span>Call</span></button></div></div><!-- downloadMcpServer --><div class="rd-option-card rd-option-card--multi" data-method="downloadMcpServer"><div class="rd-option-info"><div class="rd-option-label">downloadMcpServer()</div><div class="rd-option-tip">Download the MCP server project (manifest, runtime and stdio server) as a zip</div></div><button type="button" class="rd-pretty-action-btn rd-mcp-exec-btn" style="margin-left: auto;"><span>Call</span></button></div></div></div><div class="rd-pretty-category-section" data-category="Spec &amp; Content"><div class="rd-pretty-category-divider"><span class="rd-pretty-category-tag">Spec &amp; Content</span></div><div class="rd-pretty-settings-list"><div class="rd-option-card rd-option-card--boolean rd-option-card--inline" data-control-attr="sort-tags"><div class="rd-option-info"><div class="rd-option-label-row"><div class="rd-option-label">sort-tags</div><span class="rd-option-help" tabindex="0" role="button" aria-label="About sort-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true" aria-hidden="true"><path d="M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z"/></svg><span class="rd-option-help-pop" role="tooltip"><span class="rd-option-help-text">Sorts tags in alphabetical order. When set to "false", preserves the tag order defined in the
+OpenAPI specification.</span><span class="rd-option-help-default"><span class="rd-default-mark" aria-hidden="true"></span>Default: <code>false</code></span></span></span></div><div class="rd-option-tip">Alphabetically sort tag sections in sidebar</div></div><div class="rd-control-wrapper"><label class="rd-switch"><input type="checkbox" class="rd-toggle-input" data-attr="sort-tags"><span class="rd-slider"></span></label></div></div></div></div><!-- Slot for custom, test-specific action buttons or inputs --><div class="rd-pretty-slot-container"></div></div></div></aside></div><script>
+  (function initRapidocTuners() {
+    function setupController(root) {
+      if (root.__rdPrettyInitialized) return;
+      root.__rdPrettyInitialized = true;
+
+      const targetId = root.getAttribute('data-target') || 'thedoc';
+      let initialAttrs = {};
+      try {
+        const rawInitial = root.getAttribute('data-initial-attrs');
+        if (rawInitial) {
+          initialAttrs = JSON.parse(rawInitial);
+        }
+      } catch (_) {}
+
+      const edgeTab = root.querySelector('.rd-pretty-edge-tab');
+      const drawer = root.querySelector('.rd-pretty-drawer');
+      const closeBtn = root.querySelector('.rd-pretty-close-btn');
+      const resetBtn = root.querySelector('.rd-pretty-reset-btn');
+      const statusDots = root.querySelectorAll('.rd-pretty-status-dot');
+
+      const storageKeyOpen = `rd_pretty_open_${window.location.pathname}`;
+
+      // Font controls set --font-sans / --font-mono. An option with data-font-css also loads its stylesheet,
+      // since RapiDoc loads no fonts itself.
+      function applyFont(target, attr, val) {
+        const cssVar = attr === 'regular-font' ? '--font-sans' : attr === 'mono-font' ? '--font-mono' : '';
+        if (!cssVar) return;
+        if (!val) {
+          target.style.removeProperty(cssVar);
+          return;
+        }
+        const optionEl = Array.from(root.querySelectorAll(`[data-attr="${attr}"][data-font-css]`)).find(
+          (el) => (el.getAttribute('value') ?? el.getAttribute('data-val')) === val
+        );
+        const fontCss = optionEl?.getAttribute('data-font-css');
+        const isLoaded = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).some((link) => link.href === fontCss);
+        if (fontCss && !isLoaded) {
+          const linkEl = document.createElement('link');
+          linkEl.rel = 'stylesheet';
+          linkEl.href = fontCss;
+          document.head.append(linkEl);
+        }
+        target.style.setProperty(cssVar, val);
+      }
+
+      function openDrawer() {
+        if (!drawer) return;
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        root.classList.add('is-drawer-open');
+        edgeTab?.setAttribute('aria-expanded', 'true');
+        sessionStorage.setItem(storageKeyOpen, 'true');
+        window.dispatchEvent(new CustomEvent('rapidoc-tuner:opened'));
+      }
+
+      function closeDrawer() {
+        if (!drawer) return;
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        root.classList.remove('is-drawer-open');
+        edgeTab?.setAttribute('aria-expanded', 'false');
+        sessionStorage.setItem(storageKeyOpen, 'false');
+        window.dispatchEvent(new CustomEvent('rapidoc-tuner:closed'));
+      }
+
+      function toggleDrawer() {
+        if (drawer?.classList.contains('is-open')) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      }
+
+      edgeTab?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openDrawer();
+      });
+
+      window.addEventListener('rapidoc-tuner:open', openDrawer);
+      window.addEventListener('rapidoc-tuner:close', closeDrawer);
+      window.addEventListener('rapidoc-tuner:toggle', toggleDrawer);
+
+      window.rapidocTuner = {
+        open: openDrawer,
+        close: closeDrawer,
+        toggle: toggleDrawer,
+        isOpen: () => Boolean(drawer?.classList.contains('is-open')),
+      };
+
+      closeBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeDrawer();
+      });
+
+      // Keyboard shortcuts: Cmd+K / Ctrl+K toggles, Escape closes
+      window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          if (drawer?.classList.contains('is-open')) {
+            closeDrawer();
+          } else {
+            openDrawer();
+          }
+        } else if (e.key === 'Escape' && drawer?.classList.contains('is-open')) {
+          closeDrawer();
+        }
+      });
+
+      function getTarget() {
+        return document.getElementById(targetId);
+      }
+
+      function executeScrollTo() {
+        const target = getTarget();
+        if (!target) return;
+        const input = root.querySelector('.rd-scroll-path-input');
+        if (!input) return;
+        let path = input.value.trim();
+        if (!path) return;
+
+        // Normalize spaces or colons like "get /user/login" or "get: /user/login" -> "get-/user/login"
+        path = path.replace(/^(\w+)[\s:]+(\/.*)$/i, (_, m, p) => `${m.toLowerCase()}-${p}`);
+
+        // Auto-prefix helper if raw path without method or tag prefix is given
+        if (target.shadowRoot && !target.shadowRoot.getElementById(path)) {
+          const cleanPath = path.startsWith('/') ? path : `/${path}`;
+          const candidates = [
+            `get-${cleanPath}`,
+            `post-${cleanPath}`,
+            `put-${cleanPath}`,
+            `delete-${cleanPath}`,
+            `patch-${cleanPath}`,
+            `tag--${path.replace(/^tag--/, '')}`,
+          ];
+          for (const cand of candidates) {
+            if (target.shadowRoot.getElementById(cand)) {
+              path = cand;
+              break;
+            }
+          }
+        }
+
+        if (typeof target.scrollToPath === 'function') {
+          target.scrollToPath(path);
+        } else if (typeof target.scrollTo === 'function') {
+          target.scrollTo(path);
+        }
+      }
+
+      const scrollInput = root.querySelector('.rd-scroll-path-input');
+      scrollInput?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          e.stopPropagation();
+          executeScrollTo();
+        }
+      });
+
+      const SLOT_TEMPLATES = {
+        'nav-logo': `
+          <div slot="nav-logo" data-tuner-slot="nav-logo" style="display:flex; align-items:center; justify-content:center; width:100% !important; box-sizing:border-box !important; padding:12px 16px !important; background:color-mix(in srgb, var(--primary, #3b82f6) 18%, var(--background, #18181b)) !important; color:var(--foreground, currentColor); min-height:48px;">
+            <img src="/assets/images/dog.png" style="width:40px; margin-right:20px;" alt="Dog">
+            <span style="font-size:13px;">
+              <b>nav-logo</b> slot
+            </span>
+          </div>
+        `.trim(),
+        'fixed-header': `
+          <div slot="fixed-header" data-tuner-slot="fixed-header" style="display:flex; align-items:center; justify-content:center; width:100% !important; box-sizing:border-box !important; padding:10px 16px !important; margin:0; background:color-mix(in srgb, var(--primary, #3b82f6) 18%, var(--background, #18181b)) !important; color:var(--foreground, currentColor); min-height:40px;">
+            <span style="font-size:13px;">
+              <b>fixed-header</b> slot
+            </span>
+          </div>
+        `.trim(),
+        'default': `
+          <div data-tuner-slot="default" style="display:flex; align-items:center; justify-content:center; width:100% !important; box-sizing:border-box !important; padding:16px 24px !important; margin:0; background:color-mix(in srgb, var(--primary, #3b82f6) 18%, var(--background, #18181b)) !important; color:var(--foreground, currentColor); min-height:48px;">
+            <span style="font-size:13px;">
+              <b>(default)</b> slot
+            </span>
+          </div>
+        `.trim(),
+      };
+
+      function getSlotElement(target, slotName) {
+        if (!target) return null;
+        if (slotName === 'nav-logo') {
+          return target.querySelector(':scope > [slot="nav-logo"]');
+        }
+        if (slotName === 'fixed-header') {
+          return target.querySelector(':scope > [slot="fixed-header"]');
+        }
+        if (slotName === 'default') {
+          const tunerEl = target.querySelector(':scope > [data-tuner-slot="default"]');
+          if (tunerEl) return tunerEl;
+          return Array.from(target.children).find(
+            (c) => !c.hasAttribute('slot') && c.tagName !== 'SCRIPT' && c.tagName !== 'STYLE'
+          );
+        }
+        return null;
+      }
+
+      function setSlotState(target, slotName, enable) {
+        if (!target || !SLOT_TEMPLATES[slotName]) return;
+        const existing = getSlotElement(target, slotName);
+        if (enable) {
+          if (!existing) {
+            const template = document.createElement('template');
+            template.innerHTML = SLOT_TEMPLATES[slotName];
+            const newEl = template.content.firstElementChild;
+            if (newEl) {
+              target.appendChild(newEl);
+            }
+          }
+        } else {
+          if (existing) {
+            existing.remove();
+          }
+        }
+      }
+
+      // Synchronize controller UI from the target element attributes
+      function syncControllerState() {
+        const target = getTarget();
+        if (!target) return;
+
+        // Sync radio chips & color chips
+        root.querySelectorAll('.rd-radio-input').forEach((input) => {
+          const attr = input.getAttribute('data-attr');
+          const val = input.value ?? '';
+          if (!attr) return;
+
+          let currentVal = target.getAttribute(attr);
+          if (attr === 'layout' && (currentVal === null || currentVal === '')) {
+            const currentRenderStyle = target.getAttribute('render-style') || target.renderStyle || 'focused';
+            currentVal = currentRenderStyle === 'read' || currentRenderStyle === 'focused' ? 'column' : 'row';
+          }
+          let isMatching = false;
+
+          if (currentVal !== null && currentVal !== '') {
+            isMatching = String(currentVal).toLowerCase() === String(val).toLowerCase();
+          } else {
+            isMatching = input.getAttribute('data-is-default') === 'true';
+          }
+
+          input.checked = isMatching;
+          const parentLabel = input.closest('.rd-chip');
+          if (parentLabel) {
+            if (isMatching) {
+              parentLabel.classList.add('active');
+            } else {
+              parentLabel.classList.remove('active');
+            }
+          }
+        });
+
+        // Sync dropdowns: the option of the current value, else the default option
+        root.querySelectorAll('.rd-select-input').forEach((select) => {
+          const attr = select.getAttribute('data-attr');
+          if (!attr) return;
+          const currentVal = target.getAttribute(attr);
+          const options = Array.from(select.options);
+          const match =
+            currentVal !== null && currentVal !== ''
+              ? options.find((o) => o.value.toLowerCase() === String(currentVal).toLowerCase())
+              : options.find((o) => o.getAttribute('data-is-default') === 'true');
+          select.selectedIndex = match ? options.indexOf(match) : -1;
+        });
+
+        // Sync boolean toggle inputs
+        root.querySelectorAll('.rd-toggle-input').forEach((input) => {
+          const attr = input.getAttribute('data-attr');
+          if (!attr) return;
+          const currentVal = target.getAttribute(attr);
+          const defaultOn = input.getAttribute('data-default-on') === 'true';
+          const isActive = currentVal === 'true' || (currentVal !== 'false' && (currentVal !== null ? true : defaultOn));
+
+          input.checked = isActive;
+        });
+
+        // Sync slot inputs
+        root.querySelectorAll('.rd-pretty-slot-input').forEach((input) => {
+          const slotName = input.getAttribute('data-slot');
+          if (!slotName) return;
+          const isPresent = Boolean(getSlotElement(target, slotName));
+          input.checked = isPresent;
+        });
+
+        // Sync active spec option if present
+        const currentSpecUrl = target.getAttribute('spec-url') || '';
+        root.querySelectorAll('.rd-method-spec-btn').forEach((btn) => {
+          const btnSpec = btn.getAttribute('data-spec-url') || '';
+          const isActive = Boolean(
+            btnSpec &&
+              currentSpecUrl &&
+              (currentSpecUrl === btnSpec ||
+                currentSpecUrl.endsWith(btnSpec) ||
+                btnSpec.endsWith(currentSpecUrl) ||
+                (btnSpec.includes('petstore') && currentSpecUrl.includes('petstore')) ||
+                (btnSpec.includes('open-api-3-1') && currentSpecUrl.includes('open-api-3-1')))
+          );
+          if (isActive) {
+            btn.classList.add('is-active');
+            btn.setAttribute('aria-checked', 'true');
+          } else {
+            btn.classList.remove('is-active');
+            btn.setAttribute('aria-checked', 'false');
+          }
+        });
+      }
+
+      // Handle user interactions inside controller
+      root.addEventListener('change', (e) => {
+        const target = getTarget();
+        if (!target) return;
+
+        // Radio or dropdown change
+        if (e.target.matches('.rd-radio-input, .rd-select-input')) {
+          const attr = e.target.getAttribute('data-attr');
+          const val = e.target.value ?? '';
+          if (attr) {
+            applyFont(target, attr, val);
+            if (val === '') {
+              target.removeAttribute(attr);
+            } else {
+              target.setAttribute(attr, val);
+            }
+            const camelProp = attr.replace(/-([a-z])/g, (_, g) => g.toUpperCase());
+            if (camelProp in target) {
+              try {
+                target[camelProp] = val;
+              } catch (_) {}
+            }
+            if (attr === 'render-style') {
+              const syncLayout = val === 'read' || val === 'focused' ? 'column' : 'row';
+              target.setAttribute('layout', syncLayout);
+              if ('layout' in target) {
+                target.layout = syncLayout;
+              }
+            }
+            syncControllerState();
+          }
+          return;
+        }
+
+        // Toggle change
+        if (e.target.matches('.rd-toggle-input')) {
+          const attr = e.target.getAttribute('data-attr');
+          if (attr) {
+            const newVal = e.target.checked ? 'true' : 'false';
+            target.setAttribute(attr, newVal);
+            const camelProp = attr.replace(/-([a-z])/g, (_, g) => g.toUpperCase());
+            if (camelProp in target) {
+              try {
+                target[camelProp] = newVal;
+              } catch (_) {}
+            }
+            syncControllerState();
+          }
+          return;
+        }
+
+        // Slot toggle change
+        if (e.target.matches('.rd-pretty-slot-input')) {
+          const slotName = e.target.getAttribute('data-slot');
+          if (slotName) {
+            setSlotState(target, slotName, e.target.checked);
+            syncControllerState();
+          }
+          return;
+        }
+      });
+
+      root.addEventListener('click', (e) => {
+        const methodSpecBtn = e.target.closest('.rd-method-spec-btn');
+        if (methodSpecBtn) {
+          const specToLoad = methodSpecBtn.getAttribute('data-spec-url');
+          const target = getTarget();
+          if (target && specToLoad) {
+            target.setAttribute('spec-url', specToLoad);
+            if (typeof target.loadSpec === 'function') {
+              target.loadSpec(specToLoad);
+            }
+            syncControllerState();
+          }
+          return;
+        }
+
+        const scrollExecBtn = e.target.closest('.rd-scroll-exec-btn');
+        if (scrollExecBtn) {
+          executeScrollTo();
+          return;
+        }
+
+        const mcpExecBtn = e.target.closest('.rd-mcp-exec-btn');
+        if (mcpExecBtn) {
+          const target = getTarget();
+          if (target && typeof target.downloadMcpServer === 'function') {
+            target.downloadMcpServer();
+          }
+          return;
+        }
+      });
+
+      // Reset functionality
+      resetBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const target = getTarget();
+        if (!target) return;
+
+        // Reset to initialAttrs or clear attributes
+        root.querySelectorAll('.rd-radio-input, .rd-select-input, .rd-toggle-input').forEach((input) => {
+          const attr = input.getAttribute('data-attr');
+          if (!attr) return;
+
+          if (initialAttrs && Object.prototype.hasOwnProperty.call(initialAttrs, attr)) {
+            const initialVal = String(initialAttrs[attr]);
+            target.setAttribute(attr, initialVal);
+            applyFont(target, attr, initialVal);
+          } else {
+            target.removeAttribute(attr);
+            applyFont(target, attr, '');
+          }
+        });
+
+        // Reset slot states to initial
+        ['nav-logo', 'fixed-header', 'default'].forEach((slotName) => {
+          const wasInitial = initialSlots[slotName];
+          const current = getSlotElement(target, slotName);
+          if (!wasInitial && current) {
+            current.remove();
+          } else if (wasInitial && !current) {
+            setSlotState(target, slotName, true);
+          }
+        });
+
+        syncControllerState();
+      });
+
+      let initialSlots = {};
+
+      function attachToTarget() {
+        const target = getTarget();
+        if (!target) {
+          setTimeout(attachToTarget, 100);
+          return;
+        }
+
+        initialSlots = {
+          'nav-logo': Boolean(getSlotElement(target, 'nav-logo')),
+          'fixed-header': Boolean(getSlotElement(target, 'fixed-header')),
+          default: Boolean(getSlotElement(target, 'default')),
+        };
+
+        try {
+          if (initialAttrs) {
+            Object.entries(initialAttrs).forEach(([key, val]) => {
+              if (!target.hasAttribute(key) && val !== undefined && val !== null) {
+                target.setAttribute(key, String(val));
+              }
+            });
+          }
+          applyFont(target, 'regular-font', target.getAttribute('regular-font'));
+          applyFont(target, 'mono-font', target.getAttribute('mono-font'));
+        } catch (_) {}
+
+        target.addEventListener('spec-loaded', () => {
+          statusDots.forEach((dot) => dot.classList.add('is-loaded'));
+        });
+
+        target.addEventListener('after-render', () => {
+          statusDots.forEach((dot) => dot.classList.add('is-ready'));
+          syncControllerState();
+        });
+
+        const observer = new MutationObserver(() => {
+          syncControllerState();
+        });
+        observer.observe(target, { attributes: true, childList: true });
+
+        syncControllerState();
+        if (customElements?.whenDefined) {
+          customElements.whenDefined('rapi-doc').then(() => {
+            syncControllerState();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachToTarget);
+      } else {
+        attachToTarget();
+      }
+
+      // Check default open preference or session persistence
+      const isDefaultOpen = root.getAttribute('data-default-open') === 'true';
+      const sessionState = sessionStorage.getItem(storageKeyOpen);
+      if (sessionState === 'true' || (sessionState === null && isDefaultOpen)) {
+        openDrawer();
+      }
+    }
+
+    document.querySelectorAll('.rd-pretty-controller-root').forEach(setupController);
+  })();
+</script><!-- Slide-Over Live Spec Editor Drawer --><aside class="dr-drawer" id="dr-drawer" aria-hidden="true"><div class="dr-drawer-header"><div class="dr-drawer-title"><h4>Live Spec Editor</h4><span class="dr-format-tag" id="dr-format-tag">YAML / JSON</span></div><button type="button" class="dr-drawer-close" id="dr-btn-close-drawer" aria-label="Close Drawer">&times;</button></div><div class="dr-drawer-body"><textarea id="dr-textarea" class="dr-textarea" placeholder="Paste or write OpenAPI spec in YAML or JSON..." spellcheck="false" autocomplete="off"></textarea><div class="dr-error-banner" id="dr-error-banner" style="display: none;"></div></div><div class="dr-drawer-footer"><span class="dr-hint"><kbd>Cmd</kbd> + <kbd>Enter</kbd> to apply</span><div class="dr-drawer-actions"><button type="button" class="dr-btn" id="dr-btn-format-json" style="display: none;">Format JSON</button><button type="button" class="dr-btn" id="dr-btn-reset-drawer" title="Reset editor to original spec text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M228,128a100,100,0,0,1-98.66,100H128a99.39,99.39,0,0,1-68.62-27.29,12,12,0,0,1,16.48-17.45,76,76,0,1,0-1.57-109c-.13.13-.25.25-.39.37L54.89,92H72a12,12,0,0,1,0,24H24a12,12,0,0,1-12-12V56a12,12,0,0,1,24,0V76.72L57.48,57.06A100,100,0,0,1,228,128Z"/></svg><span>Reset</span></button><button type="button" class="dr-btn" id="dr-btn-cancel-drawer">Cancel</button><button type="button" class="dr-btn dr-btn-primary" id="dr-btn-apply-drawer">Apply</button></div></div></aside><!-- Drag & Drop Fullscreen Overlay --><div class="dr-drop-overlay" id="dr-drop-overlay"><div class="dr-drop-card"><div style="font-size: 48px;">📥</div><h3>Drop OpenAPI Spec</h3><p>Drop any <code>.yaml</code> or <code>.json</code> file to render immediately</p></div></div><!-- Toast Container --><div class="dr-toast-container" id="dr-toast-container" aria-live="polite"></div><!-- Client Script --><script>
+      (function () {
+        let rapidocEl;
+        let activeSpecUrl = '/specs/sandbox.yaml';
+        let originalSpecContent = '';
+        let isDrawerOpen = false;
+        let activeBlobUrl = null;
+
+        const floatingBar = document.getElementById('dr-floating-bar');
+        const btnEditor = document.getElementById('dr-btn-editor');
+        const btnTuner = document.getElementById('dr-btn-tuner');
+        const btnCloseDrawer = document.getElementById('dr-btn-close-drawer');
+        const btnCancelDrawer = document.getElementById('dr-btn-cancel-drawer');
+        const btnResetDrawer = document.getElementById('dr-btn-reset-drawer');
+        const btnApplyDrawer = document.getElementById('dr-btn-apply-drawer');
+        const btnFormatJson = document.getElementById('dr-btn-format-json');
+        const drawer = document.getElementById('dr-drawer');
+        const textarea = document.getElementById('dr-textarea');
+        const errorBanner = document.getElementById('dr-error-banner');
+        const formatTag = document.getElementById('dr-format-tag');
+        const fileInput = document.getElementById('dr-file-input');
+        const dropOverlay = document.getElementById('dr-drop-overlay');
+        const toastContainer = document.getElementById('dr-toast-container');
+
+        function init() {
+          rapidocEl = document.getElementById('thedoc');
+          if (!rapidocEl) return;
+
+          loadDefaultSpec();
+          bindEvents();
+        }
+
+        async function loadDefaultSpec() {
+          try {
+            const res = await fetch(`/specs/sandbox.yaml?_t=${Date.now()}`);
+            if (res.ok) {
+              activeSpecUrl = '/specs/sandbox.yaml';
+              originalSpecContent = await res.text();
+            } else {
+              activeSpecUrl = '/specs/sandbox.json';
+              const resJson = await fetch(`/specs/sandbox.json?_t=${Date.now()}`);
+              originalSpecContent = await resJson.text();
+            }
+          } catch {
+            activeSpecUrl = '/specs/sandbox.yaml';
+          }
+          if (originalSpecContent) {
+            textarea.value = originalSpecContent;
+            updateFormatTag();
+          }
+          rapidocEl.loadSpec(`${activeSpecUrl}?_t=${Date.now()}`);
+        }
+
+        function bindEvents() {
+          // Tuner Drawer Toggle
+          btnTuner?.addEventListener('click', () => {
+            if (isDrawerOpen) {
+              toggleDrawer(false);
+            }
+            if (window.rapidocTuner) {
+              window.rapidocTuner.toggle();
+            } else {
+              const edgeTab = document.querySelector('.rd-pretty-edge-tab');
+              if (edgeTab) {
+                edgeTab.click();
+              } else {
+                window.dispatchEvent(new CustomEvent('rapidoc-tuner:toggle'));
+              }
+            }
+          });
+
+          window.addEventListener('rapidoc-tuner:opened', () => {
+            btnTuner?.classList.add('active');
+          });
+          window.addEventListener('rapidoc-tuner:closed', () => {
+            btnTuner?.classList.remove('active');
+          });
+
+          // Drawer
+          btnEditor.addEventListener('click', () => toggleDrawer(true));
+          btnCloseDrawer.addEventListener('click', () => toggleDrawer(false));
+          btnCancelDrawer.addEventListener('click', () => toggleDrawer(false));
+          btnResetDrawer?.addEventListener('click', () => resetEditorContent());
+          btnApplyDrawer.addEventListener('click', () => applyDrawer());
+          btnFormatJson.addEventListener('click', () => formatJson());
+
+          textarea.addEventListener('input', updateFormatTag);
+
+          // Upload
+          fileInput.addEventListener('change', (e) => {
+            const file = e.target.files && e.target.files[0];
+            if (file) handleFile(file);
+            fileInput.value = '';
+          });
+
+          // Window focus -> auto reload from disk if active spec is a file
+          window.addEventListener('focus', () => {
+            if (!isDrawerOpen && !activeSpecUrl.startsWith('blob:')) {
+              rapidocEl.loadSpec(`${activeSpecUrl}?_t=${Date.now()}`);
+              showToast('Auto-reloaded spec from disk', 'info');
+            }
+          });
+
+          // Keyboard Shortcuts
+          window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              if (isDrawerOpen) {
+                toggleDrawer(false);
+                return;
+              }
+            }
+
+            if (document.activeElement === textarea) {
+              if (e.key === 'Tab') {
+                e.preventDefault();
+                const s = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                textarea.value = textarea.value.substring(0, s) + '  ' + textarea.value.substring(end);
+                textarea.selectionStart = textarea.selectionEnd = s + 2;
+              } else if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+                e.preventDefault();
+                applyDrawer();
+              }
+              return;
+            }
+
+            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+            if (e.key.toLowerCase() === 'e' && !e.metaKey && !e.ctrlKey) {
+              e.preventDefault();
+              toggleDrawer();
+            }
+          });
+
+          setupDragAndDrop();
+        }
+
+        async function toggleDrawer(force) {
+          isDrawerOpen = typeof force === 'boolean' ? force : !isDrawerOpen;
+          drawer.classList.toggle('open', isDrawerOpen);
+          drawer.setAttribute('aria-hidden', String(!isDrawerOpen));
+
+          if (isDrawerOpen) {
+            window.rapidocTuner?.close?.();
+            if (!textarea.value.trim()) {
+              if (originalSpecContent) {
+                textarea.value = originalSpecContent;
+              } else if (!activeSpecUrl.startsWith('blob:')) {
+                try {
+                  const res = await fetch(`${activeSpecUrl}?_t=${Date.now()}`);
+                  if (res.ok) {
+                    originalSpecContent = await res.text();
+                    textarea.value = originalSpecContent;
+                  }
+                } catch (err) {
+                  console.error(err);
+                }
+              }
+            }
+            updateFormatTag();
+            textarea.focus();
+          }
+        }
+
+        async function resetEditorContent() {
+          if (!originalSpecContent && !activeSpecUrl.startsWith('blob:')) {
+            try {
+              const res = await fetch(`${activeSpecUrl}?_t=${Date.now()}`);
+              if (res.ok) originalSpecContent = await res.text();
+            } catch (err) {
+              console.error(err);
+            }
+          }
+          if (originalSpecContent) {
+            textarea.value = originalSpecContent;
+            errorBanner.style.display = 'none';
+            updateFormatTag();
+            textarea.focus();
+            showToast('Restored original spec text', 'info');
+          }
+        }
+
+        function updateFormatTag() {
+          const text = textarea.value.trim();
+          const isJson = text.startsWith('{') || text.startsWith('[');
+          formatTag.textContent = isJson ? 'JSON' : 'YAML';
+          btnFormatJson.style.display = isJson ? 'inline-flex' : 'none';
+        }
+
+        function formatJson() {
+          try {
+            const parsed = JSON.parse(textarea.value);
+            textarea.value = JSON.stringify(parsed, null, 2);
+            errorBanner.style.display = 'none';
+            showToast('JSON formatted', 'success');
+          } catch (err) {
+            errorBanner.textContent = `Invalid JSON: ${err.message}`;
+            errorBanner.style.display = 'block';
+          }
+        }
+
+        async function applyDrawer() {
+          const content = textarea.value.trim();
+          if (!content) {
+            errorBanner.textContent = 'Spec content cannot be empty';
+            errorBanner.style.display = 'block';
+            return;
+          }
+
+          try {
+            const isJson = content.startsWith('{') || content.startsWith('[');
+            const mimeType = isJson ? 'application/json' : 'text/yaml';
+
+            if (activeBlobUrl) URL.revokeObjectURL(activeBlobUrl);
+            const blob = new Blob([content], { type: mimeType });
+            activeBlobUrl = URL.createObjectURL(blob);
+            activeSpecUrl = activeBlobUrl;
+
+            await rapidocEl.loadSpec(activeBlobUrl);
+            errorBanner.style.display = 'none';
+            toggleDrawer(false);
+            showToast('Spec updated in RapiDoc', 'success');
+          } catch (err) {
+            console.error(err);
+            errorBanner.textContent = `Render error: ${err.message}`;
+            errorBanner.style.display = 'block';
+          }
+        }
+
+        function handleFile(file) {
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = async (e) => {
+            const content = e.target.result;
+            textarea.value = content;
+            originalSpecContent = content;
+            updateFormatTag();
+
+            const isJson = file.name.endsWith('.json') || content.trim().startsWith('{');
+            const mimeType = isJson ? 'application/json' : 'text/yaml';
+
+            if (activeBlobUrl) URL.revokeObjectURL(activeBlobUrl);
+            const blob = new Blob([content], { type: mimeType });
+            activeBlobUrl = URL.createObjectURL(blob);
+            activeSpecUrl = activeBlobUrl;
+
+            await rapidocEl.loadSpec(activeBlobUrl);
+            showToast(`Loaded ${file.name}`, 'success');
+          };
+          reader.readAsText(file);
+        }
+
+        function setupDragAndDrop() {
+          let dragCounter = 0;
+          window.addEventListener('dragenter', (e) => {
+            e.preventDefault();
+            dragCounter++;
+            dropOverlay.classList.add('visible');
+          });
+          window.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dragCounter--;
+            if (dragCounter <= 0) {
+              dropOverlay.classList.remove('visible');
+              dragCounter = 0;
+            }
+          });
+          window.addEventListener('dragover', (e) => e.preventDefault());
+          window.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dragCounter = 0;
+            dropOverlay.classList.remove('visible');
+            const files = e.dataTransfer && e.dataTransfer.files;
+            if (files && files.length > 0) handleFile(files[0]);
+          });
+        }
+
+        function showToast(message, type = 'info') {
+          const toast = document.createElement('div');
+          toast.className = `dr-toast dr-toast-${type}`;
+          toast.textContent = message;
+          toastContainer.appendChild(toast);
+          setTimeout(() => {
+            toast.classList.add('fade-out');
+            setTimeout(() => toast.remove(), 300);
+          }, 2500);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+        if (document.readyState === 'interactive' || document.readyState === 'complete') init();
+      })();
+    </script></body></html>

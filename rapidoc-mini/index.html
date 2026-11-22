@@ -1,0 +1,609 @@
+<!DOCTYPE html><!-- Dark only; data-site-page marks the pages with the site's own layout for styles/portal.css --><html lang="en" data-theme="dark" data-site-page><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"><!-- Primary SEO Meta Tags --><title>RapiDoc Mini: Embed API Endpoints in Posts and Guides | RapiDoc</title><meta name="title" content="RapiDoc Mini: Embed API Endpoints in Posts and Guides | RapiDoc"><meta name="description" content="Embed lightweight, contextual OpenAPI documentation snippets and single endpoints directly inside blogs, tutorials, dashboards, and developer portals."><meta name="keywords" content="RapiDoc Mini, rapi-doc-mini, OpenAPI widget, embed API docs, micro API documentation"><link rel="canonical" href="https://rapidocui.com/rapidoc-mini/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://rapidocui.com/rapidoc-mini/"><meta property="og:title" content="RapiDoc Mini: Embed API Endpoints in Posts and Guides | RapiDoc"><meta property="og:description" content="Embed lightweight, contextual OpenAPI documentation snippets and single endpoints directly inside blogs, tutorials, dashboards, and developer portals."><meta property="og:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><meta property="og:site_name" content="RapiDoc"><!-- Twitter --><meta property="twitter:card" content="summary"><meta property="twitter:url" content="https://rapidocui.com/rapidoc-mini/"><meta property="twitter:title" content="RapiDoc Mini: Embed API Endpoints in Posts and Guides | RapiDoc"><meta property="twitter:description" content="Embed lightweight, contextual OpenAPI documentation snippets and single endpoints directly inside blogs, tutorials, dashboards, and developer portals."><meta property="twitter:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><!-- Fonts: Inter and JetBrains Mono for the site; Lato, Nunito, Roboto Mono and Sono for the font demos --><!-- Fonts - START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sono:wght@200..800&display=swap" rel="stylesheet"><!-- Fonts - END --><!-- Google Analytics - START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-M9TPKERDJ6"></script><script>(function(){const gtagId = "G-M9TPKERDJ6";
+const pageTitle = "Products / RapiDoc Mini";
+const contentGroup = "Products";
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var config = {};
+  if (pageTitle) {
+    config.page_title = pageTitle;
+  }
+  if (contentGroup) {
+    config.content_group = contentGroup;
+  }
+  gtag('config', gtagId, config);
+})();</script><!-- Google Analytics - END --><script type="module" src="/assets/rapidoc-min.js"></script><link rel="stylesheet" href="/_rapidoc/assets/GoogleAnalytics.C5odW2gp.css"><link rel="stylesheet" href="/_rapidoc/assets/PortalFooter.CM1Ve5T-.css"><style>.code-wrapper:where(.astro-dymqotyw){background:var(--rd-bg-surface);border:1px solid var(--rd-border);border-radius:0;width:100%;margin:1rem 0;overflow:hidden;box-shadow:0 10px 30px -10px #00000080}.code-header:where(.astro-dymqotyw){color:#8b949e;background:#ffffff05;border-bottom:1px solid #ffffff0f;align-items:center;padding:10px 16px;font-size:13px;display:flex}.code-dot:where(.astro-dymqotyw){border-radius:50%;width:10px;height:10px;margin-right:6px}.code-dot:where(.astro-dymqotyw).red{background:#ff5f56}.code-dot:where(.astro-dymqotyw).yellow{background:#ffbd2e}.code-dot:where(.astro-dymqotyw).green{background:#27c93f}.code-title:where(.astro-dymqotyw){font-family:var(--rd-font-mono);color:#c9d1d9;flex:1;margin-left:8px;font-size:12px}.copy-btn:where(.astro-dymqotyw){background:var(--rd-wash);color:#c9d1d9;border-radius:var(--rd-radius-sm);cursor:pointer;border:1px solid #ffffff1a;align-items:center;gap:5px;padding:4px 10px;font-size:11px;transition:all .2s;display:flex}.copy-btn:where(.astro-dymqotyw):hover{color:var(--rd-text-bright);background:#ffffff1f}.code-body:where(.astro-dymqotyw){padding:0;overflow-x:auto}.code-body:where(.astro-dymqotyw) pre{font-size:13.5px!important;line-height:1.6!important;font-family:var(--rd-font-mono)!important;background:0 0!important;margin:0!important;padding:16px 20px!important}
+.rd-comparison-container:where(.astro-3uproq3w){border:1px solid var(--rd-border);border-radius:var(--rd-radius-md);background:var(--rd-surface-card);width:100%;margin:20px 0;overflow-x:auto;box-shadow:0 8px 30px #00000059}.rd-comparison-table:where(.astro-3uproq3w){border-collapse:collapse;text-align:left;width:100%;font-size:14px}.rd-comparison-table:where(.astro-3uproq3w) th:where(.astro-3uproq3w){background:var(--rd-wash);color:var(--rd-text-bright);text-align:left;border-bottom:1px solid var(--rd-border);white-space:nowrap;padding:14px 20px;font-weight:600}.rd-comparison-table:where(.astro-3uproq3w) th:where(.astro-3uproq3w) code:where(.astro-3uproq3w){color:var(--rd-sky);font-size:13px}.rd-comparison-table:where(.astro-3uproq3w) td:where(.astro-3uproq3w){text-align:left;vertical-align:top;color:var(--rd-text-muted);border-bottom:1px solid #ffffff0d;padding:14px 20px;line-height:1.55}.rd-comparison-table:where(.astro-3uproq3w) tr:where(.astro-3uproq3w):last-child td:where(.astro-3uproq3w){border-bottom:none}.col-feature:where(.astro-3uproq3w){color:var(--rd-text-primary);text-align:left;min-width:180px;font-weight:600}.col-rapidoc:where(.astro-3uproq3w){text-align:left;min-width:260px}.col-mini:where(.astro-3uproq3w){min-width:260px;color:var(--rd-text-soft);text-align:left}@media (width<=640px){.rd-comparison-table:where(.astro-3uproq3w) th:where(.astro-3uproq3w),.rd-comparison-table:where(.astro-3uproq3w) td:where(.astro-3uproq3w){padding:10px 14px;font-size:13px}}
+</style><link rel="stylesheet" href="/_rapidoc/assets/rapidoc-mini.DZcIayr9.css"><script type="module" src="/_rapidoc/assets/cNngjUgL.js"></script></head><body><div class="ambient-glow glow-emerald astro-qvzfrvr4"></div><div class="ambient-glow glow-indigo astro-qvzfrvr4"></div><div class="ambient-glow glow-cyan astro-qvzfrvr4"></div><header class="portal-header-root" data-portal-region="header" data-portal-own-document><!-- Row 1: brand, search, links and menus, theme switcher --><div class="portal-navbar" data-portal-region="header-inner"><a href="/" class="portal-brand" aria-label="RapiDoc home"><img src="/assets/images/rapidoc-lockup-light.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-light"><img src="/assets/images/rapidoc-lockup-dark.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-dark"><span class="portal-brand-badge">v14.2</span></a><nav class="portal-nav-menu portal-nav-menu-start" aria-label="Main"><div class="portal-dropdown-wrapper"><button type="button" class="portal-nav-button portal-dropdown-trigger" aria-expanded="false" aria-controls="portal-menu-0"><span>Products</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-chevron"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/></svg></button><div class="portal-megamenu-panel" id="portal-menu-0"><div class="portal-megamenu-groups"><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-0"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-0">Products</h2><ul class="portal-megamenu-group-list"><li><a href="/rapidoc/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc</span><span class="portal-card-badge">&lt;rapi-doc&gt;</span></div><p class="portal-card-desc">Interactive API reference from your OpenAPI spec</p></div></a></li><li><a href="/rapidoc-mini/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M204,168a28,28,0,0,0,12-2.69V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V165.31a28,28,0,1,1,0-50.62V72a8,8,0,0,1,8-8h46.69a28,28,0,1,1,50.61,0H208a8,8,0,0,1,8,8v42.69A28,28,0,1,0,204,168Z" opacity="0.2"/><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.15,36.15,0,0,0-11.36-26.25,36,36,0,0,0-60.55,23.63,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,36.56,36.56,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc Mini</span><span class="portal-card-badge">&lt;rapi-doc-mini&gt;</span></div><p class="portal-card-desc">A few endpoints, with Try, inside a post or guide</p></div></a></li><li><a href="/rapi-flow/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M224,200a24,24,0,1,1-24-24A24,24,0,0,1,224,200Z" opacity="0.2"/><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiFlow</span><span class="portal-card-badge">&lt;rapi-flow&gt;</span></div><p class="portal-card-desc">Step through and run Arazzo workflows</p></div></a></li><li><a href="/rapipdf/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiPdf</span><span class="portal-card-badge">&lt;rapi-pdf&gt;</span></div><p class="portal-card-desc">Turn an OpenAPI spec into a PDF</p></div></a></li><li><a href="/rapi-mock/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2"/><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiMock</span><span class="portal-card-badge">rapidoc mock</span></div><p class="portal-card-desc">A mock server that validates requests and remembers</p></div></a></li><li><a href="/portal/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M104,104V208H40a8,8,0,0,1-8-8V104Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc Portal</span></div><p class="portal-card-desc">API references and guides as one site, with search and SSO</p></div></a></li></ul></section><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-1"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-1">Tools</h2><ul class="portal-megamenu-group-list"><li><a href="/cli/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M216,80V192H40V64H200A16,16,0,0,1,216,80Z" opacity="0.2"/><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc CLI</span><span class="portal-card-badge">rapidoc</span></div><p class="portal-card-desc">Preview, validate, lint, bundle and export OpenAPI specs</p></div></a></li><li><a href="/docs/mcp/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M200,56H56A24,24,0,0,0,32,80V192a24,24,0,0,0,24,24H200a24,24,0,0,0,24-24V80A24,24,0,0,0,200,56ZM164,184H92a20,20,0,0,1,0-40h72a20,20,0,0,1,0,40Z" opacity="0.2"/><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Zm4,28H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">MCP Server</span></div><p class="portal-card-desc">Turn your API into tools for AI agents</p></div></a></li><li><a href="/docs/prerender/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Pre-rendering</span></div><p class="portal-card-desc">Server-rendered HTML for search engines and a fast first paint</p></div></a></li></ul></section><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-2"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-2">Integrations</h2><ul class="portal-megamenu-group-list"><li><a href="/integrations/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">All integrations</span></div></div></a></li><li><a href="/docs/integrations/front-end/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">React, Vue, Angular, Svelte</span></div></div></a></li><li><a href="/docs/integrations/node/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Hono, Express, Fastify</span></div></div></a></li><li><a href="/docs/integrations/docs-sites/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Starlight, VitePress, Docusaurus</span></div></div></a></li><li><a href="/docs/integrations/python/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Python (FastAPI, Starlette)</span></div></div></a></li><li><a href="/docs/integrations/dotnet/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">.NET (ASP.NET Core)</span></div></div></a></li><li><a href="/docs/integrations/go/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Go (net/http)</span></div></div></a></li><li><a href="/docs/integrations/build-your-own/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Build an integration</span></div></div></a></li></ul></section></div><div class="portal-megamenu-footer"><a href="/docs/#which-package-do-i-need" class="portal-megamenu-footer-link"><span>Which package do I need?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div></div></div><a href="/docs/" class="portal-nav-link">Docs</a><a href="/examples" class="portal-nav-link">Examples</a></nav><button type="button" class="portal-search-trigger" id="portal-search-btn" aria-label="Search ⌘K" aria-keyshortcuts="Meta+K Control+K /"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-search-icon"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"/></svg><span class="portal-search-text">Search</span><kbd class="portal-search-kbd">⌘K</kbd></button><div class="portal-nav-end"><nav class="portal-nav-menu portal-nav-menu-end" aria-label="More"><a href="https://github.com/rapi-doc/RapiDoc" class="portal-nav-link portal-nav-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-nav-link-icon"><path d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"/></svg>GitHub</a></nav><button type="button" class="portal-theme-btn" id="portal-theme-toggle" aria-label="Dark mode" aria-pressed="false"><span class="portal-theme-option portal-theme-light" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M116,36V20a12,12,0,0,1,24,0V36a12,12,0,0,1-24,0Zm80,92a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM48,128a12,12,0,0,0-12-12H20a12,12,0,0,0,0,24H36A12,12,0,0,0,48,128Zm80,80a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V220A12,12,0,0,0,128,208Zm108-92H220a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"/></svg></span><span class="portal-theme-option portal-theme-dark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M236.37,139.4a12,12,0,0,0-12-3A84.07,84.07,0,0,1,119.6,31.59a12,12,0,0,0-15-15A108.86,108.86,0,0,0,49.69,55.07,108,108,0,0,0,136,228a107.09,107.09,0,0,0,64.93-21.69,108.86,108.86,0,0,0,38.44-54.94A12,12,0,0,0,236.37,139.4Zm-49.88,47.74A84,84,0,0,1,68.86,69.51,84.93,84.93,0,0,1,92.27,48.29Q92,52.13,92,56A108.12,108.12,0,0,0,200,164q3.87,0,7.71-.27A84.79,84.79,0,0,1,186.49,187.14Z"/></svg></span></button><button type="button" class="portal-mobile-toggle" id="portal-mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="portal-mobile-drawer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button></div></div><!-- Row 2: section tabs --><!-- Mobile Drawer --><div class="portal-mobile-drawer" id="portal-mobile-drawer" hidden><div class="portal-mobile-nav"><nav class="portal-mobile-tabs" aria-label="Sections"><a href="/docs/rapidoc/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg><span>RapiDoc</span></a><a href="/docs/rapidoc-mini/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg><span>RapiDoc Mini</span></a><a href="/docs/rapipdf/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg><span>RapiPdf</span></a><a href="/docs/cli/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg><span>RapiDoc CLI</span></a><a href="/docs/mcp/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"/></svg><span>MCP Server</span></a><a href="/docs/prerender/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span>Pre-rendering</span></a><a href="/docs/integrations/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M237.66,66.34a8,8,0,0,0-11.32,0L192,100.69,155.31,64l34.35-34.34a8,8,0,1,0-11.32-11.32L144,52.69,117.66,26.34a8,8,0,0,0-11.32,11.32L112.69,44l-53,53a40,40,0,0,0,0,56.57l15.71,15.71L26.34,218.34a8,8,0,0,0,11.32,11.32l49.09-49.09,15.71,15.71a40,40,0,0,0,56.57,0l53-53,6.34,6.35a8,8,0,0,0,11.32-11.32L203.31,112l34.35-34.34A8,8,0,0,0,237.66,66.34ZM147.72,185a24,24,0,0,1-33.95,0L71,142.23a24,24,0,0,1,0-33.95l53-53L200.69,132Z"/></svg><span>Integrations</span></a></nav><div class="portal-mobile-links-group"><div class="portal-mobile-section"><div class="portal-mobile-section-title">Products</div><div class="portal-mobile-links"><a href="/rapidoc/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg><span>RapiDoc</span></a><a href="/rapidoc-mini/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg><span>RapiDoc Mini</span></a><a href="/rapi-flow/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg><span>RapiFlow</span></a><a href="/rapipdf/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg><span>RapiPdf</span></a><a href="/rapi-mock/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg><span>RapiMock</span></a><a href="/portal/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z"/></svg><span>RapiDoc Portal</span></a><a href="/cli/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg><span>RapiDoc CLI</span></a><a href="/docs/mcp/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"/></svg><span>MCP Server</span></a><a href="/docs/prerender/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span>Pre-rendering</span></a><a href="/integrations/" class="portal-mobile-item"><span>All integrations</span></a><a href="/docs/integrations/front-end/" class="portal-mobile-item"><span>React, Vue, Angular, Svelte</span></a><a href="/docs/integrations/node/" class="portal-mobile-item"><span>Hono, Express, Fastify</span></a><a href="/docs/integrations/docs-sites/" class="portal-mobile-item"><span>Starlight, VitePress, Docusaurus</span></a><a href="/docs/integrations/python/" class="portal-mobile-item"><span>Python (FastAPI, Starlette)</span></a><a href="/docs/integrations/dotnet/" class="portal-mobile-item"><span>.NET (ASP.NET Core)</span></a><a href="/docs/integrations/go/" class="portal-mobile-item"><span>Go (net/http)</span></a><a href="/docs/integrations/build-your-own/" class="portal-mobile-item"><span>Build an integration</span></a></div></div><a href="/docs/" class="portal-mobile-direct-link">Docs</a><a href="/examples" class="portal-mobile-direct-link">Examples</a><a href="https://github.com/rapi-doc/RapiDoc" class="portal-mobile-direct-link portal-mobile-button" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></div></header><!-- Full-Text Search Modal (⌘K / Ctrl+K) --><div id="portal-search-modal" data-base="/" class="portal-search-modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Search Documentation"><div class="portal-search-modal-dialog"><div class="portal-search-modal-header"><span class="portal-search-modal-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></span><input type="search" class="portal-search-modal-input" placeholder="Search documentation, guides, and APIs..." aria-label="Search" autocomplete="off" spellcheck="false"><button class="portal-search-modal-close" aria-label="Close search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div><div class="portal-search-modal-filters"><button type="button" class="portal-search-filter-btn active" data-filter="all">All</button><button type="button" class="portal-search-filter-btn" data-filter="doc">Guides & Docs</button><button type="button" class="portal-search-filter-btn" data-filter="api">API Operations</button><button type="button" class="portal-search-filter-btn" data-filter="page">Pages</button></div><div class="portal-search-modal-body"><div class="portal-search-modal-results" role="listbox"></div><div class="portal-search-modal-empty hidden">No results found for "<span class="portal-search-empty-query"></span>"</div><div class="portal-search-modal-hint">Type keywords to search across guides, tutorials, and APIs...</div></div><div class="portal-search-modal-footer"><div class="portal-search-footer-hint"><kbd class="portal-kbd">↑</kbd><kbd class="portal-kbd">↓</kbd> <span>Navigate</span></div><div class="portal-search-footer-hint"><kbd class="portal-kbd">↵</kbd> <span>Select</span></div><div class="portal-search-footer-hint"><kbd class="portal-kbd">ESC</kbd> <span>Close</span></div></div></div></div><script>
+  (function () {
+    const modal = document.getElementById('portal-search-modal');
+    if (!modal) return;
+
+    const input = modal.querySelector('.portal-search-modal-input');
+    const closeBtn = modal.querySelector('.portal-search-modal-close');
+    const resultsContainer = modal.querySelector('.portal-search-modal-results');
+    const emptyState = modal.querySelector('.portal-search-modal-empty');
+    const emptyQuerySpan = modal.querySelector('.portal-search-empty-query');
+    const hintState = modal.querySelector('.portal-search-modal-hint');
+    const filterBtns = modal.querySelectorAll('.portal-search-filter-btn');
+
+    // Paths in the search index are relative to the portal; the portal may be served under a base path.
+    const base = (modal.dataset.base || '/').replace(/\/+$/, '');
+    const withBase = (url) => (url && url.startsWith('/') && !url.startsWith('//') ? base + url : url);
+
+    let searchRecords = null;
+    let isLoading = false;
+    let activeFilter = 'all';
+    let currentResults = [];
+    let selectedIndex = 0;
+
+    async function loadSearchIndex() {
+      if (searchRecords || isLoading) return;
+      isLoading = true;
+      try {
+        const candidateUrls = [withBase('/search-index.json')];
+        for (const url of candidateUrls) {
+          try {
+            const res = await fetch(url);
+            if (res.ok) {
+              const data = await res.json();
+              searchRecords = data.records || [];
+              showFiltersWithResults();
+              break;
+            }
+          } catch {}
+        }
+      } catch (err) {
+        console.warn('Failed to load search index:', err);
+      } finally {
+        isLoading = false;
+      }
+    }
+
+    // A filter is offered only for a kind of result the site has (a portal without APIs has no
+    // "API Operations"), and the row only when there is something to choose between.
+    function showFiltersWithResults() {
+      const kinds = new Set(searchRecords.map((record) => record.type));
+      filterBtns.forEach((btn) => {
+        const kind = btn.getAttribute('data-filter');
+        btn.hidden = kind !== 'all' && !kinds.has(kind);
+      });
+      const row = modal.querySelector('.portal-search-modal-filters');
+      if (row) row.hidden = kinds.size < 2;
+    }
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      loadSearchIndex();
+      setTimeout(() => {
+        if (input) {
+          input.focus();
+          if (input.value) {
+            performSearch(input.value);
+          }
+        }
+      }, 50);
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (input) input.value = '';
+      if (resultsContainer) resultsContainer.innerHTML = '';
+      if (emptyState) emptyState.classList.add('hidden');
+      if (hintState) hintState.classList.remove('hidden');
+      selectedIndex = 0;
+    }
+
+    // Keyboard trigger: ⌘K or Ctrl+K or / (when not typing in an input)
+    document.addEventListener('keydown', (e) => {
+      const isCmdK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
+      const isSlash = e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName);
+
+      if (isCmdK || isSlash) {
+        e.preventDefault();
+        if (modal.classList.contains('hidden')) {
+          openModal();
+        } else {
+          closeModal();
+        }
+      } else if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        e.preventDefault();
+        closeModal();
+      }
+    });
+
+    // Listen for search button click in header
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('#portal-search-btn, .portal-search-trigger')) {
+        e.preventDefault();
+        openModal();
+      }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter') || 'all';
+        if (input && input.value) {
+          performSearch(input.value);
+        }
+      });
+    });
+
+    function performSearch(query) {
+      const q = query.toLowerCase().trim();
+      if (!q) {
+        resultsContainer.innerHTML = '';
+        emptyState.classList.add('hidden');
+        hintState.classList.remove('hidden');
+        currentResults = [];
+        selectedIndex = 0;
+        return;
+      }
+
+      hintState.classList.add('hidden');
+
+      if (!searchRecords || !searchRecords.length) {
+        resultsContainer.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        if (emptyQuerySpan) emptyQuerySpan.textContent = query;
+        return;
+      }
+
+      // Words of the query: a result must have every one of them, in any of its fields
+      const tokens = q.split(/\s+/).filter(Boolean);
+      // A name written with hyphens is found without them, and the other way round ("rapidoc" and
+      // "rapi-doc" find the same things). A field with hyphens is searched in both spellings.
+      const foldHyphens = (text) => (text.includes('-') ? text + ' ' + text.replace(/-/g, '') : text);
+      const hasWord = (field, word) => {
+        if (field.includes(word)) return true;
+        const plain = word.replace(/-/g, '');
+        return plain !== word && plain.length > 0 && field.includes(plain);
+      };
+      const scored = [];
+
+      for (const record of searchRecords) {
+        if (activeFilter !== 'all' && record.type !== activeFilter) {
+          continue;
+        }
+
+        const titleLower = foldHyphens((record.title || '').toLowerCase());
+        const subtitleLower = foldHyphens((record.subtitle || '').toLowerCase());
+        const endpointLower = (record.endpoint || '').toLowerCase();
+        const methodLower = (record.method || '').toLowerCase();
+        const categoryLower = (record.category || '').toLowerCase();
+        const contentLower = foldHyphens((record.content || '').toLowerCase());
+
+        let score = 0;
+        let matchesAllTokens = true;
+
+        for (const token of tokens) {
+          let tokenMatched = false;
+          if (hasWord(titleLower, token)) {
+            score += titleLower.startsWith(token) ? 25 : 15;
+            tokenMatched = true;
+          }
+          if (hasWord(endpointLower, token)) {
+            score += endpointLower.startsWith(token) ? 20 : 12;
+            tokenMatched = true;
+          }
+          if (hasWord(subtitleLower, token)) {
+            score += 10;
+            tokenMatched = true;
+          }
+          if (methodLower === token) {
+            score += 15;
+            tokenMatched = true;
+          }
+          if (hasWord(categoryLower, token)) {
+            score += 8;
+            tokenMatched = true;
+          }
+          if (hasWord(contentLower, token)) {
+            score += 4;
+            tokenMatched = true;
+          }
+
+          if (!tokenMatched) {
+            matchesAllTokens = false;
+            break;
+          }
+        }
+
+        if (matchesAllTokens && score > 0) {
+          if (titleLower === q || endpointLower === q) score += 30;
+          scored.push({ ...record, score });
+        }
+      }
+
+      scored.sort((a, b) => b.score - a.score);
+      currentResults = scored.slice(0, 15);
+      selectedIndex = 0;
+      renderResults(currentResults, tokens, query);
+    }
+
+    function highlightText(text, tokens) {
+      if (!text) return '';
+      let escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      for (const token of tokens) {
+        if (!token) continue;
+        const re = new RegExp('(' + token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        escaped = escaped.replace(re, '<mark class="portal-search-match">$1</mark>');
+      }
+      return escaped;
+    }
+
+    function renderResults(results, tokens, query) {
+      resultsContainer.innerHTML = '';
+      if (!results.length) {
+        emptyState.classList.remove('hidden');
+        if (emptyQuerySpan) emptyQuerySpan.textContent = query;
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      results.forEach((item, idx) => {
+        const link = document.createElement('a');
+        link.href = withBase(item.url);
+        link.className = 'portal-search-result-item ' + (idx === selectedIndex ? 'selected' : '');
+        link.setAttribute('role', 'option');
+        link.setAttribute('data-index', idx);
+
+        let badgeHtml = '';
+        if (item.type === 'api' && item.method) {
+          const methodClass = 'method-' + item.method.toLowerCase();
+          badgeHtml = '<span class="portal-search-badge ' + methodClass + '">' + item.method + '</span>';
+        } else if (item.type === 'page') {
+          badgeHtml = '<span class="portal-search-badge badge-page">PAGE</span>';
+        } else {
+          badgeHtml = '<span class="portal-search-badge badge-doc">DOC</span>';
+        }
+
+        const titleHtml = highlightText(item.title, tokens);
+        const endpointHtml = item.endpoint
+          ? '<span class="portal-search-result-endpoint">' + highlightText(item.endpoint, tokens) + '</span>'
+          : '';
+        const snippetHtml = item.content ? highlightText(item.content.slice(0, 140) + '...', tokens) : '';
+
+        link.innerHTML =
+          '<div class="portal-search-result-header">' +
+          badgeHtml +
+          '<span>' + titleHtml + '</span>' +
+          endpointHtml +
+          '<span class="portal-search-result-category">' + (item.category || '') + '</span>' +
+          '</div>' +
+          (snippetHtml ? '<div class="portal-search-result-snippet">' + snippetHtml + '</div>' : '');
+
+        link.addEventListener('click', closeModal);
+        resultsContainer.appendChild(link);
+      });
+    }
+
+    function updateSelection(newIdx) {
+      const items = resultsContainer.querySelectorAll('.portal-search-result-item');
+      if (!items.length) return;
+      if (newIdx < 0) newIdx = items.length - 1;
+      if (newIdx >= items.length) newIdx = 0;
+      selectedIndex = newIdx;
+      items.forEach((it, i) => {
+        if (i === selectedIndex) {
+          it.classList.add('selected');
+          it.scrollIntoView({ block: 'nearest' });
+        } else {
+          it.classList.remove('selected');
+        }
+      });
+    }
+
+    if (input) {
+      input.addEventListener('input', (e) => performSearch(e.target.value));
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          updateSelection(selectedIndex + 1);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          updateSelection(selectedIndex - 1);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (currentResults[selectedIndex]) {
+            const url = currentResults[selectedIndex].url;
+            closeModal();
+            window.location.href = withBase(url);
+          }
+        }
+      });
+    }
+  })();
+</script><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Theme switcher: a toggle button, pressed while the dark theme is on
+    const themeBtn = document.getElementById('portal-theme-toggle');
+    if (themeBtn) {
+      const root = document.documentElement;
+      const sync = () => themeBtn.setAttribute('aria-pressed', String(root.getAttribute('data-theme') !== 'light'));
+      sync();
+      themeBtn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try {
+          localStorage.setItem('starlight-theme', next);
+        } catch {}
+        sync();
+      });
+    }
+
+    // 2. Announcement Dismissal
+    const closeAnnounce = document.getElementById('portal-announcement-close');
+    const announceBar = document.getElementById('portal-announcement');
+    if (closeAnnounce && announceBar) {
+      // The class hides the bar and sets --portal-banner-height to 0 (portal-theme.css).
+      closeAnnounce.addEventListener('click', () => {
+        document.documentElement.classList.add('portal-announcement-dismissed');
+        // Remembered across reloads and visits until the announcement changes.
+        try {
+          localStorage.setItem(`portal-announcement-dismissed:${announceBar.dataset.bannerKey}`, '1');
+        } catch {}
+      });
+    }
+
+    // 3. Search Trigger (⌘K)
+    const searchBtn = document.getElementById('portal-search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        const slSearch = document.querySelector('button[data-open-modal]');
+        if (slSearch) {
+          slSearch.click();
+        } else {
+          const rapiDoc = document.querySelector('rapi-doc');
+          if (rapiDoc && typeof rapiDoc.openSearchDialog === 'function') {
+            rapiDoc.openSearchDialog();
+          } else {
+            window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true, bubbles: true }));
+          }
+        }
+      });
+    }
+
+    // 4. Dropdown menus (WAI-ARIA disclosure navigation): the trigger button toggles its panel, and
+    // hovering opens it for the mouse. Keyboard: Enter/Space toggle, ArrowDown opens the menu and moves
+    // to the next link, ArrowUp/Home/End move between links, Escape closes the menu and returns to its
+    // trigger, and tabbing out closes it. ArrowLeft/ArrowRight move between the top-level items.
+    const navMenus = [...document.querySelectorAll('.portal-nav-menu')];
+    const wrappers = [...document.querySelectorAll('.portal-dropdown-wrapper')];
+    const triggerOf = (wrapper) => wrapper.querySelector('.portal-dropdown-trigger');
+    const isOpen = (wrapper) => wrapper.classList.contains('is-open');
+    const setOpen = (wrapper, open) => {
+      wrapper.classList.toggle('is-open', open);
+      triggerOf(wrapper).setAttribute('aria-expanded', String(open));
+    };
+    const closeAll = (except) => wrappers.forEach((wrapper) => wrapper !== except && setOpen(wrapper, false));
+
+    wrappers.forEach((wrapper) => {
+      const trigger = triggerOf(wrapper);
+      wrapper.addEventListener('mouseenter', () => closeAll(wrapper));
+      trigger.addEventListener('click', () => {
+        const open = !isOpen(wrapper);
+        closeAll(wrapper);
+        setOpen(wrapper, open);
+      });
+      wrapper.addEventListener('keydown', (e) => {
+        const links = [...wrapper.querySelectorAll('.portal-megamenu-panel a')];
+        const index = links.indexOf(document.activeElement);
+        let next;
+        if (e.key === 'Escape') {
+          if (!isOpen(wrapper)) return;
+          setOpen(wrapper, false);
+          trigger.focus();
+        } else if (e.key === 'ArrowDown') {
+          if (!isOpen(wrapper)) {
+            closeAll(wrapper);
+            setOpen(wrapper, true);
+          }
+          next = links[(index + 1) % links.length];
+        } else if (index !== -1 && e.key === 'ArrowUp') {
+          next = links[(index - 1 + links.length) % links.length];
+        } else if (index !== -1 && e.key === 'Home') {
+          next = links[0];
+        } else if (index !== -1 && e.key === 'End') {
+          next = links[links.length - 1];
+        } else {
+          return;
+        }
+        e.preventDefault();
+        next?.focus();
+      });
+      wrapper.addEventListener('focusout', (e) => {
+        if (!wrapper.contains(e.relatedTarget)) setOpen(wrapper, false);
+      });
+    });
+
+    navMenus.forEach((navMenu) => {
+      navMenu.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        const items = [...navMenu.querySelectorAll(':scope > a, :scope > .portal-dropdown-wrapper > .portal-dropdown-trigger')];
+        const index = items.indexOf(document.activeElement);
+        if (index === -1) return;
+        e.preventDefault();
+        items[(index + (e.key === 'ArrowRight' ? 1 : items.length - 1)) % items.length].focus();
+      });
+      navMenu.addEventListener('mouseleave', () => closeAll());
+      navMenu.querySelectorAll(':scope > a').forEach((link) => link.addEventListener('mouseenter', () => closeAll()));
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.portal-dropdown-wrapper')) closeAll();
+    });
+
+    // 5. Menu drawer (narrow screens without a sidebar): closes on Escape and when a link is chosen
+    const mobileBtn = document.getElementById('portal-mobile-menu-btn');
+    const mobileDrawer = document.getElementById('portal-mobile-drawer');
+    if (mobileBtn && mobileDrawer) {
+      const setDrawer = (open) => {
+        mobileDrawer.hidden = !open;
+        mobileBtn.setAttribute('aria-expanded', String(open));
+      };
+      mobileBtn.addEventListener('click', () => setDrawer(mobileDrawer.hidden));
+      mobileDrawer.addEventListener('click', (e) => {
+        if (e.target.closest('a')) setDrawer(false);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileDrawer.hidden) {
+          setDrawer(false);
+          mobileBtn.focus();
+        }
+      });
+    }
+  });
+</script><main class="rd-mini-main astro-qvzfrvr4"><!-- Hero Header --><header class="rd-hero-header astro-qvzfrvr4"><div class="rd-badge-pill astro-qvzfrvr4"><span class="rd-badge-pulse astro-qvzfrvr4"></span><span class="rd-badge-text astro-qvzfrvr4">Standalone Endpoint Web Component</span></div><h1 class="rd-page-title astro-qvzfrvr4">RapiDoc <span class="text-gradient astro-qvzfrvr4">Mini</span></h1><p class="rd-page-subtitle astro-qvzfrvr4"><code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> is a lightweight, zero-iframe Web Component designed to embed live, interactive OpenAPI endpoints directly into technical blog posts, markdown tutorials, changelogs, and microservice workflows without visual clutter.</p><div class="rd-hero-actions astro-qvzfrvr4"><a href="#blog-style" class="rd-btn rd-btn-primary astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M234.49,111.07,90.41,22.94A20,20,0,0,0,60,39.87V216.13a20,20,0,0,0,30.41,16.93l144.08-88.13a19.82,19.82,0,0,0,0-33.86ZM84,208.85V47.15L216.16,128Z"/></svg><span class="astro-qvzfrvr4">See It Live</span></a><a href="/docs/rapidoc-mini/" class="rd-btn rd-btn-secondary astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M232,44H160a43.86,43.86,0,0,0-32,13.85A43.86,43.86,0,0,0,96,44H24A12,12,0,0,0,12,56V200a12,12,0,0,0,12,12H96a20,20,0,0,1,20,20,12,12,0,0,0,24,0,20,20,0,0,1,20-20h72a12,12,0,0,0,12-12V56A12,12,0,0,0,232,44ZM96,188H36V68H96a20,20,0,0,1,20,20V192.81A43.79,43.79,0,0,0,96,188Zm124,0H160a43.71,43.71,0,0,0-20,4.83V88a20,20,0,0,1,20-20h60Z"/></svg><span class="astro-qvzfrvr4">Docs</span></a><a href="/docs/rapidoc-mini/reference/" class="rd-btn rd-btn-secondary astro-qvzfrvr4"><span class="astro-qvzfrvr4">API Reference</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div><!-- Key Metrics / Feature Badges --><div class="rd-stats-bar astro-qvzfrvr4"><div class="rd-stat-card astro-qvzfrvr4"><span class="rd-stat-value astro-qvzfrvr4">100%</span><span class="rd-stat-label astro-qvzfrvr4">No &lt;iframe&gt; Friction</span></div><div class="rd-stat-card astro-qvzfrvr4"><span class="rd-stat-value astro-qvzfrvr4">Granular</span><span class="rd-stat-label astro-qvzfrvr4">Operation Filtering</span></div><div class="rd-stat-card astro-qvzfrvr4"><span class="rd-stat-value astro-qvzfrvr4">Live TRY</span><span class="rd-stat-label astro-qvzfrvr4">Interactive Console</span></div><div class="rd-stat-card astro-qvzfrvr4"><span class="rd-stat-value astro-qvzfrvr4">Multi-Spec</span><span class="rd-stat-label astro-qvzfrvr4">Microservice Mashup</span></div></div></header><!-- Why RapiDoc Mini Grid --><section class="rd-section astro-qvzfrvr4"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Why RapiDoc Mini</div><h2 class="rd-section-title astro-qvzfrvr4">The Problem with Traditional API Documentation</h2></div><div class="rd-usecase-grid astro-qvzfrvr4"><div class="rd-usecase-card astro-qvzfrvr4"><div class="rd-card-icon astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg></div><h3 class="astro-qvzfrvr4">Blog & Tutorial Writing</h3><p class="astro-qvzfrvr4">Static markdown code snippets and screenshots go stale the moment an API schema changes. <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> reads directly from your source OpenAPI spec, guaranteeing your code examples and live consoles are always 100% up to date.</p></div><div class="rd-usecase-card astro-qvzfrvr4"><div class="rd-card-icon astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M240,104,128,168,16,104,128,40Z" opacity="0.2"/><path d="M12,111l112,64a8,8,0,0,0,7.94,0l112-64a8,8,0,0,0,0-13.9l-112-64a8,8,0,0,0-7.94,0l-112,64A8,8,0,0,0,12,111ZM128,49.21,223.87,104,128,158.79,32.13,104ZM247,140A8,8,0,0,1,244,151L132,215a8,8,0,0,1-7.94,0L12,151A8,8,0,1,1,20,137.05l108,61.74,108-61.74A8,8,0,0,1,247,140Z"/></svg></div><h3 class="astro-qvzfrvr4">Step-by-Step Onboarding</h3><p class="astro-qvzfrvr4">When guiding a developer through a multistep journey (e.g. Register &rarr; Verify &rarr; Transact), you don't want to overwhelm them with 100 irrelevant endpoints. Pluck and display only the relevant endpoint at each step.</p></div><div class="rd-usecase-card astro-qvzfrvr4"><div class="rd-card-icon astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M224,64a24,24,0,1,1-24-24A24,24,0,0,1,224,64Z" opacity="0.2"/><path d="M232,64a32,32,0,1,0-40,31v17a8,8,0,0,1-8,8H96a23.84,23.84,0,0,0-8,1.38V95a32,32,0,1,0-16,0v66a32,32,0,1,0,16,0V144a8,8,0,0,1,8-8h88a24,24,0,0,0,24-24V95A32.06,32.06,0,0,0,232,64ZM64,64A16,16,0,1,1,80,80,16,16,0,0,1,64,64ZM96,192a16,16,0,1,1-16-16A16,16,0,0,1,96,192ZM200,80a16,16,0,1,1,16-16A16,16,0,0,1,200,80Z"/></svg></div><h3 class="astro-qvzfrvr4">Microservice Storytelling</h3><p class="astro-qvzfrvr4">Modern architectures divide APIs across dozens of microservices. <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> allows you to pluck 1 endpoint from Billing, 1 from Identity, and 1 from Catalog into a unified narrative without merging backend specs.</p></div><div class="rd-usecase-card astro-qvzfrvr4"><div class="rd-card-icon astro-qvzfrvr4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M208,192H48a8,8,0,0,1-6.88-12C47.71,168.6,56,139.81,56,104a72,72,0,0,1,144,0c0,35.82,8.3,64.6,14.9,76A8,8,0,0,1,208,192Z" opacity="0.2"/><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"/></svg></div><h3 class="astro-qvzfrvr4">Release Notes & Changelogs</h3><p class="astro-qvzfrvr4">Announce a new or deprecated endpoint in your product changelog by embedding the live interactive card directly into the release announcement with a working "TRY" console.</p></div></div></section><!-- ================= DEMO 1: ESSENTIAL EMBED ================= --><section class="rd-section astro-qvzfrvr4" id="blog-style"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 1</div><h2 class="rd-section-title astro-qvzfrvr4">Seamless Blog & Guide Embedding</h2></div><p class="rd-section-desc astro-qvzfrvr4">Just like an <code class="astro-qvzfrvr4">&lt;img&gt;</code> tag, <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> drops directly into any HTML flow. Notice how it blends seamlessly with the page background, allowing you to trigger live API requests without being trapped inside an iframe or nested card:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">blog-embed.html</span><button class="copy-btn astro-dymqotyw" data-code="<script type=&quot;module&quot; src=&quot;https://unpkg.com/rapidoc/dist/rapidoc-min.js&quot;></script>
+
+<rapi-doc-mini
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  paths-expanded=&quot;false&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">script</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"module"</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"https://unpkg.com/rapidoc/dist/rapidoc-min.js"</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">script</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><script type="module">document.querySelectorAll(`.copy-btn`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.getAttribute(`data-code`);if(t){await navigator.clipboard.writeText(t.trim());let n=e.querySelector(`.copy-text`);if(n){let e=n.textContent;n.textContent=`Copied!`,setTimeout(()=>{n.textContent=e},2e3)}}})});</script><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">Live Component Output (Blended with Page)</span></div><!-- RapiDoc Mini rendered directly on page surface --><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/reqres.yaml" color-scheme="dark" paths-expanded="false"> </rapi-doc-mini></div></div></section><!-- ================= DEMO 2: CUSTOM STYLING & SIZING ================= --><section class="rd-section astro-qvzfrvr4" id="styling-sizing"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 2</div><h2 class="rd-section-title astro-qvzfrvr4">Placement, Sizing &amp; Custom CSS Styling</h2></div><p class="rd-section-desc astro-qvzfrvr4">Just like an <code class="astro-qvzfrvr4">&lt;img&gt;</code> or <code class="astro-qvzfrvr4">&lt;div&gt;</code> tag, <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> can be styled with standard CSS. You can easily constrain its <code class="astro-qvzfrvr4">width</code>, apply custom <code class="astro-qvzfrvr4">border</code> and <code class="astro-qvzfrvr4">border-radius</code>, adjust <code class="astro-qvzfrvr4">padding</code>, or attach box shadows to fit your exact layout requirements:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">custom-styling.html</span><button class="copy-btn astro-dymqotyw" data-code="<!-- Custom width, golden border, table schema, and padding -->
+<rapi-doc-mini
+  style=&quot;max-width: 650px; width: 100%; border: 2px solid #eab308; border-radius: 8px; padding: 12px; margin: 16px 0;&quot;
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  schema-style=&quot;table&quot;
+  layout=&quot;column&quot;
+  paths-expanded=&quot;false&quot;
+> </rapi-doc-mini>
+
+<!-- Compact single-endpoint card with salmon accent border -->
+<rapi-doc-mini
+  style=&quot;max-width: 650px; width: 100%; border: 1px solid #f87171; border-radius: 6px; padding: 8px; margin: 16px 0;&quot;
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  filter-operations=&quot;POST /users&quot;
+  paths-expanded=&quot;false&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- Custom width, golden border, table schema, and padding --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"max-width: 650px; width: 100%; border: 2px solid #eab308; border-radius: 8px; padding: 12px; margin: 16px 0;"</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  schema-style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"table"</span></span>
+<span class="line"><span style="color:#B392F0">  layout</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"column"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">&#x3C;!-- Compact single-endpoint card with salmon accent border --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"max-width: 650px; width: 100%; border: 1px solid #f87171; border-radius: 6px; padding: 8px; margin: 16px 0;"</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"POST /users"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4" style="background: #eab308; box-shadow: 0 0 8px #eab308;"></span><span class="astro-qvzfrvr4">Custom Width (650px), Golden Border &amp; Padding</span></div><rapi-doc-mini style="max-width: 650px; width: 100%; border: 2px solid #eab308; border-radius: 8px; padding: 12px; margin: 0 0 24px 0;" spec-url="/specs/reqres.yaml" color-scheme="dark" schema-style="table" layout="column" paths-expanded="false" class="astro-qvzfrvr4"></rapi-doc-mini><div class="rd-live-indicator astro-qvzfrvr4" style="margin-top: 16px;"><span class="rd-live-dot astro-qvzfrvr4" style="background: #f87171; box-shadow: 0 0 8px #f87171;"></span><span class="astro-qvzfrvr4">Single-Endpoint Card with Salmon Accent Border</span></div><rapi-doc-mini style="max-width: 650px; width: 100%; border: 1px solid #f87171; border-radius: 6px; padding: 8px; margin: 0 0 24px 0;" spec-url="/specs/reqres.yaml" color-scheme="dark" filter-operations="POST /users" paths-expanded="false" class="astro-qvzfrvr4"></rapi-doc-mini></div></div></section><!-- ================= DEMO 3: PATH FILTERING ================= --><section class="rd-section astro-qvzfrvr4" id="path-filtering"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 3</div><h2 class="rd-section-title astro-qvzfrvr4">Selective Endpoint Filtering with <code class="astro-qvzfrvr4">filter-operations</code></h2></div><p class="rd-section-desc astro-qvzfrvr4">Instead of rendering an entire specification, use <code class="astro-qvzfrvr4">filter-operations</code> to display only the exact endpoint needed for your narrative (e.g. <code class="astro-qvzfrvr4">filter-operations="POST /users"</code>). A method and path matches that path exactly, not the paths below it:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">filter-endpoint.html</span><button class="copy-btn astro-dymqotyw" data-code="<rapi-doc-mini
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  paths-expanded=&quot;false&quot;
+  filter-operations=&quot;POST /users&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"POST /users"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">Filtered Output: Only POST /users</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/reqres.yaml" color-scheme="dark" paths-expanded="false" filter-operations="POST /users"></rapi-doc-mini></div></div></section><!-- ================= DEMO 4: FILTER TERMS ================= --><section class="rd-section astro-qvzfrvr4" id="filter-terms"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 4</div><h2 class="rd-section-title astro-qvzfrvr4">Several Operations, Globs, Tags and Exclusions</h2></div><p class="rd-section-desc astro-qvzfrvr4"><code class="astro-qvzfrvr4">filter-operations</code> takes several terms, separated by spaces or commas. An operation is shown when it matches any term and no term that starts with <code class="astro-qvzfrvr4">!</code>. A term is an operationId, a method and path, a path, a glob (<code class="astro-qvzfrvr4">*</code> is one path segment, <code class="astro-qvzfrvr4">**</code> any number), <code class="astro-qvzfrvr4">tag:name</code>, <code class="astro-qvzfrvr4">badge:label</code> or <code class="astro-qvzfrvr4">deprecated</code>. Operations keep the order of the terms they match:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">filter-terms.html</span><button class="copy-btn astro-dymqotyw" data-code="<!-- A list of operations, shown in this order -->
+<rapi-doc-mini
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  schema-style=&quot;table&quot;
+  filter-operations=&quot;GET /users/{userId} POST /users&quot;
+> </rapi-doc-mini>
+
+<!-- A glob: every operation under /pet -->
+<rapi-doc-mini spec-url=&quot;/specs/petstore.json&quot; filter-operations=&quot;/pet/**&quot;> </rapi-doc-mini>
+
+<!-- A tag, without one of its operations -->
+<rapi-doc-mini
+  spec-url=&quot;/specs/petstore.json&quot;
+  filter-operations=&quot;tag:store !DELETE /store/order/{orderId}&quot;
+> </rapi-doc-mini>
+
+<!-- Everything except operations badged Internal, and deprecated ones -->
+<rapi-doc-mini spec-url=&quot;/specs/api.yaml&quot; filter-operations=&quot;!badge:Internal !deprecated&quot;> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- A list of operations, shown in this order --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  schema-style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"table"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"GET /users/{userId} POST /users"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">&#x3C;!-- A glob: every operation under /pet --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#B392F0"> spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/petstore.json"</span><span style="color:#B392F0"> filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/pet/**"</span><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">&#x3C;!-- A tag, without one of its operations --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/petstore.json"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"tag:store !DELETE /store/order/{orderId}"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">&#x3C;!-- Everything except operations badged Internal, and deprecated ones --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#B392F0"> spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/api.yaml"</span><span style="color:#B392F0"> filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"!badge:Internal !deprecated"</span><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">A list: GET /users/{userId}, then POST /users</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/reqres.yaml" color-scheme="dark" schema-style="table" paths-expanded="false" filter-operations="GET /users/{userId} POST /users"></rapi-doc-mini><div class="rd-live-indicator astro-qvzfrvr4" style="margin-top: 24px;"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">A glob: /pet/**</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/petstore.json" color-scheme="dark" paths-expanded="false" filter-operations="/pet/**"></rapi-doc-mini><div class="rd-live-indicator astro-qvzfrvr4" style="margin-top: 24px;"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">A tag and an exclusion: tag:store !DELETE /store/order/{orderId}</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/petstore.json" color-scheme="dark" paths-expanded="false" filter-operations="tag:store !DELETE /store/order/{orderId}"></rapi-doc-mini></div></div></section><!-- ================= DEMO 5: ALWAYS EXPANDED ================= --><section class="rd-section astro-qvzfrvr4" id="always-expanded"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 5</div><h2 class="rd-section-title astro-qvzfrvr4">Always-Expanded Inline Mode (<code class="astro-qvzfrvr4">paths-expanded="true"</code>)</h2></div><p class="rd-section-desc astro-qvzfrvr4">If click-to-expand accordion controls do not fit your article flow, set <code class="astro-qvzfrvr4">paths-expanded="true"</code> to render parameters, request body schemas, and the live test console fully expanded:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">expanded-mode.html</span><button class="copy-btn astro-dymqotyw" data-code="<rapi-doc-mini
+  spec-url=&quot;/specs/reqres.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  schema-style=&quot;table&quot;
+  layout=&quot;column&quot;
+  paths-expanded=&quot;true&quot;
+  filter-operations=&quot;POST /users&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/reqres.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  schema-style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"table"</span></span>
+<span class="line"><span style="color:#B392F0">  layout</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"column"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"POST /users"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">Fully Expanded Inline View</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/reqres.yaml" color-scheme="dark" schema-style="table" sort-endpoints-by="method" layout="column" paths-expanded="true" filter-operations="POST /users"></rapi-doc-mini></div></div></section><!-- ================= DEMO 6: MICROSERVICES MASHUP ================= --><section class="rd-section astro-qvzfrvr4" id="microservices"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 6</div><h2 class="rd-section-title astro-qvzfrvr4">Multi-Spec Microservice Integration</h2></div><p class="rd-section-desc astro-qvzfrvr4">Seamlessly weave endpoints from multiple independent OpenAPI specs into a cohesive story. Below, we embed an endpoint from a Syntax Highlighting service alongside an endpoint from a Petstore service in the same article:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">microservices-flow.html</span><button class="copy-btn astro-dymqotyw" data-code="<!-- Service A: Code Highlighting Service -->
+<rapi-doc-mini
+  spec-url=&quot;/specs/code-highlight.yaml&quot;
+  color-scheme=&quot;dark&quot;
+  filter-operations=&quot;GET /code&quot;
+  paths-expanded=&quot;false&quot;
+> </rapi-doc-mini>
+
+<!-- Service B: Store &amp; Inventory Service -->
+<rapi-doc-mini
+  spec-url=&quot;/specs/petstore.json&quot;
+  color-scheme=&quot;dark&quot;
+  filter-operations=&quot;/store/**&quot;
+  paths-expanded=&quot;false&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- Service A: Code Highlighting Service --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/code-highlight.yaml"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"GET /code"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">&#x3C;!-- Service B: Store &#x26; Inventory Service --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/petstore.json"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#B392F0">  filter-operations</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/store/**"</span></span>
+<span class="line"><span style="color:#B392F0">  paths-expanded</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4"></span><span class="astro-qvzfrvr4">Microservice A: Code Highlighting Spec (/specs/code-highlight.yaml)</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/code-highlight.yaml" color-scheme="dark" schema-style="table" layout="column" filter-operations="GET /code" paths-expanded="false"></rapi-doc-mini><div class="rd-live-indicator astro-qvzfrvr4" style="margin-top: 24px;"><span class="rd-live-dot astro-qvzfrvr4" style="background: #a855f7; box-shadow: 0 0 8px #a855f7;"></span><span class="astro-qvzfrvr4">Microservice B: Petstore Inventory Spec (/specs/petstore.json)</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/petstore.json" color-scheme="dark" schema-style="table" layout="column" filter-operations="/store/**" paths-expanded="false"></rapi-doc-mini></div></div></section><!-- ================= DEMO 7: SPEC NOT FOUND ERROR ================= --><section class="rd-section astro-qvzfrvr4" id="error-handling"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Interactive Demo 7</div><h2 class="rd-section-title astro-qvzfrvr4">Handling Unavailable Specs (404 / Network Errors)</h2></div><p class="rd-section-desc astro-qvzfrvr4">If an OpenAPI spec URL is missing, invalid, or returns a 404 HTTP status, <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> renders a clean built-in error message without throwing unhandled exceptions or breaking your page layout:</p><div class="rd-single-col-demo astro-qvzfrvr4"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">spec-not-found.html</span><button class="copy-btn astro-dymqotyw" data-code="<!-- Graceful error rendering when a spec is unavailable or returns 404 -->
+<rapi-doc-mini
+  spec-url=&quot;/specs/fake-non-existing.json&quot;
+  color-scheme=&quot;dark&quot;
+> </rapi-doc-mini>" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- Graceful error rendering when a spec is unavailable or returns 404 --></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">rapi-doc-mini</span></span>
+<span class="line"><span style="color:#B392F0">  spec-url</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/specs/fake-non-existing.json"</span></span>
+<span class="line"><span style="color:#B392F0">  color-scheme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"dark"</span></span>
+<span class="line"><span style="color:#E1E4E8">> &#x3C;/</span><span style="color:#85E89D">rapi-doc-mini</span><span style="color:#E1E4E8">></span></span></code></pre></div></div><div class="rd-live-wrapper astro-qvzfrvr4"><div class="rd-live-indicator astro-qvzfrvr4"><span class="rd-live-dot astro-qvzfrvr4" style="background: #ef4444; box-shadow: 0 0 8px #ef4444;"></span><span class="astro-qvzfrvr4">Graceful Error State (Non-Existent Spec URL)</span></div><rapi-doc-mini class="rd-mini-element astro-qvzfrvr4" spec-url="/specs/fake-non-existing.json" color-scheme="dark"> </rapi-doc-mini></div></div></section><!-- ================= ATTRIBUTES REFERENCE TABLE ================= --><section class="rd-section astro-qvzfrvr4" id="attributes-reference"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">API Reference</div><h2 class="rd-section-title astro-qvzfrvr4">Supported <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> Attributes</h2></div><p class="rd-section-desc astro-qvzfrvr4">Configure any of the following HTML attributes directly on the custom element tag to control filtering, theming, layout, and authorization:</p><div class="rd-table-container astro-qvzfrvr4"><table class="rd-api-table astro-qvzfrvr4"><thead class="astro-qvzfrvr4"><tr class="astro-qvzfrvr4"><th class="col-name astro-qvzfrvr4">Attribute</th><th class="col-type astro-qvzfrvr4">Type / Allowed</th><th class="col-default astro-qvzfrvr4">Default</th><th class="col-desc astro-qvzfrvr4">Description</th></tr></thead><tbody class="astro-qvzfrvr4"><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">spec-url</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(empty)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">URL of the OpenAPI specification file (JSON or YAML) to load and render.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">filter-operations</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(empty)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Which operations to show: space- or comma-separated terms. An operationId, &quot;GET /users&quot;, a path, a glob (&quot;/store/**&quot;), &quot;tag:store&quot;, &quot;badge:Beta&quot; or &quot;deprecated&quot;; &quot;!&quot; before a term leaves it out. Empty shows every operation.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">paths-expanded</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">true | false</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">false</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Controls whether matching endpoints are expanded by default or rendered as collapsible items.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">layout</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">row | column</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">row</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Internal layout of endpoint details (side-by-side parameters and console, or stacked in a column).</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">schema-style</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">tree | table</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">tree</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Visual representation of request and response JSON schemas: interactive tree or structured table.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">schema-expand-level</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">Number</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">999</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Initial expansion depth for nested schema models and properties.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">theme</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">dark | light</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">dark</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Base color theme preset for the component.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">bg-color</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">Hex / CSS color</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">#1a1a1a</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Custom background color for the component container, allowing seamless blending with your page.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">text-color</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">Hex / CSS color</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(theme default)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Base text color for endpoint descriptions, labels, and parameters.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">primary-color</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">Hex / CSS color</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">#f3705a</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Accent highlight color used for primary buttons, active tabs, and HTTP method badges.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">allow-try</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">true | false</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">true</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Enables or disables the interactive &quot;TRY&quot; execution console.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">show-curl-before-try</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">true | false</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">false</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Generates and displays copyable cURL commands directly in the card before execution.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">api-key-name</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(empty)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Name of the API key header or query parameter to include in interactive requests.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">api-key-location</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">header | query</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">header</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Target location where the API key value will be injected.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">api-key-value</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(empty)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Value of the API key or bearer authorization token.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">server-url</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(from spec)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Overrides the base API server URL for all requests made from the widget.</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">regular-font</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(system font)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Custom font family for body text and labels (e.g. &quot;Outfit, sans-serif&quot;).</div></td></tr><tr class="rd-api-row astro-qvzfrvr4"><td class="col-name astro-qvzfrvr4"><code class="rd-attr-name astro-qvzfrvr4">mono-font</code></td><td class="col-type astro-qvzfrvr4"><span class="rd-type-tag astro-qvzfrvr4">String</span></td><td class="col-default astro-qvzfrvr4"><span class="rd-default-tag astro-qvzfrvr4">(monospace)</span></td><td class="col-desc astro-qvzfrvr4"><div class="rd-attr-desc astro-qvzfrvr4">Custom font family for code blocks, payloads, and parameter definitions.</div></td></tr></tbody></table></div></section><!-- ================= COMPONENT COMPARISON ================= --><section class="rd-section astro-qvzfrvr4" id="comparison"><div class="rd-section-header astro-qvzfrvr4"><div class="rd-section-badge astro-qvzfrvr4">Architecture</div><h2 class="rd-section-title astro-qvzfrvr4">Component Comparison: <code class="astro-qvzfrvr4">&lt;rapi-doc&gt;</code> vs. <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code></h2></div><p class="rd-section-desc astro-qvzfrvr4">Understanding when to use the comprehensive full-portal <code class="astro-qvzfrvr4">&lt;rapi-doc&gt;</code> component versus the lightweight, embeddable <code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> widget:</p><div class="rd-comparison-container not-content astro-3uproq3w"><table class="rd-comparison-table astro-3uproq3w"><thead class="astro-3uproq3w"><tr class="astro-3uproq3w"><th class="col-feature astro-3uproq3w">Feature / Goal</th><th class="col-rapidoc astro-3uproq3w"><code class="astro-3uproq3w">&lt;rapi-doc&gt;</code></th><th class="col-mini astro-3uproq3w"><code class="astro-3uproq3w">&lt;rapi-doc-mini&gt;</code></th></tr></thead><tbody class="astro-3uproq3w"><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Best for</td><td class="col-rapidoc astro-3uproq3w">A complete API reference, on its own page</td><td class="col-mini astro-3uproq3w">One or a few endpoints inside a blog post, tutorial or changelog</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Navigation sidebar and search</td><td class="col-rapidoc astro-3uproq3w">Yes</td><td class="col-mini astro-3uproq3w">No</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">URL hash routing</td><td class="col-rapidoc astro-3uproq3w">Yes (update-route)</td><td class="col-mini astro-3uproq3w">No: never changes the page URL</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Tag names and descriptions</td><td class="col-rapidoc astro-3uproq3w">Always: tags are its sections and sidebar groups</td><td class="col-mini astro-3uproq3w">Off by default (show-tags=&quot;true&quot; turns them on)</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Try console</td><td class="col-rapidoc astro-3uproq3w">Yes</td><td class="col-mini astro-3uproq3w">Yes</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Sizing</td><td class="col-rapidoc astro-3uproq3w">Fills the height you give it, usually the viewport</td><td class="col-mini astro-3uproq3w">Grows with its content inside any container</td></tr><tr class="astro-3uproq3w"><td class="col-feature font-semibold astro-3uproq3w">Render modes</td><td class="col-rapidoc astro-3uproq3w">read, view and focused</td><td class="col-mini astro-3uproq3w">One: the matched operations</td></tr></tbody></table></div></section><!-- Bottom Navigation / Callout --><section class="rd-bottom-callout astro-qvzfrvr4"><div class="rd-callout-glow astro-qvzfrvr4"></div><div class="rd-callout-content astro-qvzfrvr4"><div class="rd-callout-badge astro-qvzfrvr4">Next Steps</div><h2 class="rd-callout-title astro-qvzfrvr4">Put an Endpoint in Your Next Post</h2><p class="rd-callout-desc astro-qvzfrvr4"><code class="astro-qvzfrvr4">&lt;rapi-doc-mini&gt;</code> ships in the same bundle as <code class="astro-qvzfrvr4">&lt;rapi-doc&gt;</code>. The docs cover choosing operations and recipes; the API reference lists every attribute, method and event.</p><div class="rd-callout-actions astro-qvzfrvr4"><a href="/docs/rapidoc-mini/" class="rd-btn rd-btn-primary rd-btn-lg astro-qvzfrvr4"><span class="astro-qvzfrvr4">RapiDoc Mini Docs</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a><a href="/docs/rapidoc-mini/reference/" class="rd-btn rd-btn-secondary rd-btn-lg astro-qvzfrvr4"><span class="astro-qvzfrvr4">API Reference</span></a><a href="/docs/rapidoc/get-started/quickstart/" class="rd-btn rd-btn-ghost rd-btn-lg astro-qvzfrvr4"><span class="astro-qvzfrvr4">Quickstart</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" class="astro-qvzfrvr4"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a></div></div></section></main><!-- Each divided band spans the full width, so its rule runs edge to edge like the header's;
+     the content inside lines up with the header content. --><footer class="portal-footer-root print:hidden" data-portal-region="footer"><div class="portal-footer-band"><div class="portal-footer-container portal-footer-top" data-portal-region="footer-inner"><div class="portal-footer-brand-col"><a href="/" class="portal-footer-brand"><img src="/assets/images/rapidoc-lockup-light.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-light"><img src="/assets/images/rapidoc-lockup-dark.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-dark"></a><p class="portal-footer-desc">A web component for viewing OpenAPI 3.0, 3.1 and Swagger specifications, with an interactive console.</p></div><div class="portal-footer-columns"><div class="portal-footer-col"><h2 class="portal-footer-col-title">Products</h2><ul class="portal-footer-links"><li><a href="/rapidoc/" class="portal-footer-link">RapiDoc</a></li><li><a href="/rapidoc-mini/" class="portal-footer-link">RapiDoc Mini</a></li><li><a href="/rapi-flow/" class="portal-footer-link">RapiFlow</a></li><li><a href="/rapipdf/" class="portal-footer-link">RapiPdf</a></li><li><a href="/rapi-mock/" class="portal-footer-link">RapiMock</a></li><li><a href="/portal/" class="portal-footer-link">RapiDoc Portal</a></li><li><a href="/cli/" class="portal-footer-link">RapiDoc CLI</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Docs</h2><ul class="portal-footer-links"><li><a href="/docs/" class="portal-footer-link">All documentation</a></li><li><a href="/docs/rapidoc/" class="portal-footer-link">RapiDoc</a></li><li><a href="https://flow.rapidocui.com/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiFlow</a></li><li><a href="https://mock.rapidocui.com/docs/getting-started/introduction/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiMock</a></li><li><a href="https://portal.rapidocui.com/docs/getting-started/introduction/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiDoc Portal</a></li><li><a href="/integrations/" class="portal-footer-link">Integrations</a></li><li><a href="/docs/mcp/" class="portal-footer-link">MCP Server</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Resources</h2><ul class="portal-footer-links"><li><a href="/examples/" class="portal-footer-link">Examples</a></li><li><a href="/sandbox/" class="portal-footer-link">Spec Sandbox</a></li><li><a href="/examples/controller-showcase/" class="portal-footer-link">Live Configurator</a></li><li><a href="/docs/rapidoc/migration/v13-to-v14/" class="portal-footer-link">Migration guides</a></li><li><a href="/tests/" class="portal-footer-link">Test Matrix</a></li><li><a href="/tests/performance/" class="portal-footer-link">Performance</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Project</h2><ul class="portal-footer-links"><li><a href="https://github.com/rapi-doc/RapiDoc" class="portal-footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="https://github.com/rapi-doc/RapiDoc/releases" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Releases</a></li><li><a href="https://github.com/rapi-doc/RapiDoc/issues" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Issues</a></li><li><a href="https://www.npmjs.com/package/rapidoc" class="portal-footer-link" target="_blank" rel="noopener noreferrer">npm</a></li><li><a href="https://www.simafri.com/en/managed-vps/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Hosting by Simafri</a></li></ul></div></div></div></div><div class="portal-footer-container portal-footer-bottom"><div class="portal-footer-copy"><span>© 2026 Mrinmoy Majumdar. MIT licensed.</span></div><div class="portal-footer-social"><a href="https://github.com/rapi-doc/RapiDoc" class="portal-footer-social-link" aria-label="github" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg></a></div></div></footer></body></html>

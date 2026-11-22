@@ -1,0 +1,481 @@
+<!DOCTYPE html><!-- Dark only; data-site-page marks the pages with the site's own layout for styles/portal.css --><html lang="en" data-theme="dark" data-site-page><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"><!-- Primary SEO Meta Tags --><title>RapiDoc CLI: Preview, Validate, Lint, Bundle and Mock OpenAPI Specs | RapiDoc</title><meta name="title" content="RapiDoc CLI: Preview, Validate, Lint, Bundle and Mock OpenAPI Specs | RapiDoc"><meta name="description" content="The rapidoc command (@rapidoc/cli) previews, validates, lints and bundles OpenAPI specs, writes them as PDFs, mocks them and turns them into MCP servers, and builds developer portals."><meta name="keywords" content="RapiDoc CLI, rapidoc command, OpenAPI CLI, OpenAPI linter, OpenAPI validator, OpenAPI bundler, OpenAPI mock server"><link rel="canonical" href="https://rapidocui.com/cli/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://rapidocui.com/cli/"><meta property="og:title" content="RapiDoc CLI: Preview, Validate, Lint, Bundle and Mock OpenAPI Specs | RapiDoc"><meta property="og:description" content="The rapidoc command (@rapidoc/cli) previews, validates, lints and bundles OpenAPI specs, writes them as PDFs, mocks them and turns them into MCP servers, and builds developer portals."><meta property="og:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><meta property="og:site_name" content="RapiDoc"><!-- Twitter --><meta property="twitter:card" content="summary"><meta property="twitter:url" content="https://rapidocui.com/cli/"><meta property="twitter:title" content="RapiDoc CLI: Preview, Validate, Lint, Bundle and Mock OpenAPI Specs | RapiDoc"><meta property="twitter:description" content="The rapidoc command (@rapidoc/cli) previews, validates, lints and bundles OpenAPI specs, writes them as PDFs, mocks them and turns them into MCP servers, and builds developer portals."><meta property="twitter:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><!-- Fonts: Inter and JetBrains Mono for the site; Lato, Nunito, Roboto Mono and Sono for the font demos --><!-- Fonts - START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sono:wght@200..800&display=swap" rel="stylesheet"><!-- Fonts - END --><!-- Google Analytics - START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-M9TPKERDJ6"></script><script>(function(){const gtagId = "G-M9TPKERDJ6";
+const pageTitle = "Products / RapiDoc CLI";
+const contentGroup = "Products";
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var config = {};
+  if (pageTitle) {
+    config.page_title = pageTitle;
+  }
+  if (contentGroup) {
+    config.content_group = contentGroup;
+  }
+  gtag('config', gtagId, config);
+})();</script><!-- Google Analytics - END --><link rel="stylesheet" href="/_rapidoc/assets/GoogleAnalytics.C5odW2gp.css"><link rel="stylesheet" href="/_rapidoc/assets/PortalFooter.CM1Ve5T-.css"><style>.rd-feature-title:where(.astro-fjo3oda6) code:where(.astro-fjo3oda6){font-family:var(--rd-font-mono);color:var(--rd-text-bright);font-size:.95rem}.rd-section-desc:where(.astro-fjo3oda6) a:where(.astro-fjo3oda6){color:var(--rd-accent)}.rd-cli-portal-grid:where(.astro-fjo3oda6){grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.code-wrapper:where(.astro-dymqotyw){background:var(--rd-bg-surface);border:1px solid var(--rd-border);border-radius:0;width:100%;margin:1rem 0;overflow:hidden;box-shadow:0 10px 30px -10px #00000080}.code-header:where(.astro-dymqotyw){color:#8b949e;background:#ffffff05;border-bottom:1px solid #ffffff0f;align-items:center;padding:10px 16px;font-size:13px;display:flex}.code-dot:where(.astro-dymqotyw){border-radius:50%;width:10px;height:10px;margin-right:6px}.code-dot:where(.astro-dymqotyw).red{background:#ff5f56}.code-dot:where(.astro-dymqotyw).yellow{background:#ffbd2e}.code-dot:where(.astro-dymqotyw).green{background:#27c93f}.code-title:where(.astro-dymqotyw){font-family:var(--rd-font-mono);color:#c9d1d9;flex:1;margin-left:8px;font-size:12px}.copy-btn:where(.astro-dymqotyw){background:var(--rd-wash);color:#c9d1d9;border-radius:var(--rd-radius-sm);cursor:pointer;border:1px solid #ffffff1a;align-items:center;gap:5px;padding:4px 10px;font-size:11px;transition:all .2s;display:flex}.copy-btn:where(.astro-dymqotyw):hover{color:var(--rd-text-bright);background:#ffffff1f}.code-body:where(.astro-dymqotyw){padding:0;overflow-x:auto}.code-body:where(.astro-dymqotyw) pre{font-size:13.5px!important;line-height:1.6!important;font-family:var(--rd-font-mono)!important;background:0 0!important;margin:0!important;padding:16px 20px!important}
+</style><script type="module" src="/_rapidoc/assets/cNngjUgL.js"></script></head><body><div class="ambient-glow glow-emerald astro-fjo3oda6"></div><div class="ambient-glow glow-indigo astro-fjo3oda6"></div><header class="portal-header-root" data-portal-region="header" data-portal-own-document><!-- Row 1: brand, search, links and menus, theme switcher --><div class="portal-navbar" data-portal-region="header-inner"><a href="/" class="portal-brand" aria-label="RapiDoc home"><img src="/assets/images/rapidoc-lockup-light.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-light"><img src="/assets/images/rapidoc-lockup-dark.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-dark"><span class="portal-brand-badge">v14.2</span></a><nav class="portal-nav-menu portal-nav-menu-start" aria-label="Main"><div class="portal-dropdown-wrapper"><button type="button" class="portal-nav-button portal-dropdown-trigger" aria-expanded="false" aria-controls="portal-menu-0"><span>Products</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-chevron"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/></svg></button><div class="portal-megamenu-panel" id="portal-menu-0"><div class="portal-megamenu-groups"><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-0"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-0">Products</h2><ul class="portal-megamenu-group-list"><li><a href="/rapidoc/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc</span><span class="portal-card-badge">&lt;rapi-doc&gt;</span></div><p class="portal-card-desc">Interactive API reference from your OpenAPI spec</p></div></a></li><li><a href="/rapidoc-mini/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M204,168a28,28,0,0,0,12-2.69V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V165.31a28,28,0,1,1,0-50.62V72a8,8,0,0,1,8-8h46.69a28,28,0,1,1,50.61,0H208a8,8,0,0,1,8,8v42.69A28,28,0,1,0,204,168Z" opacity="0.2"/><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.15,36.15,0,0,0-11.36-26.25,36,36,0,0,0-60.55,23.63,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,36.56,36.56,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc Mini</span><span class="portal-card-badge">&lt;rapi-doc-mini&gt;</span></div><p class="portal-card-desc">A few endpoints, with Try, inside a post or guide</p></div></a></li><li><a href="/rapi-flow/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M224,200a24,24,0,1,1-24-24A24,24,0,0,1,224,200Z" opacity="0.2"/><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiFlow</span><span class="portal-card-badge">&lt;rapi-flow&gt;</span></div><p class="portal-card-desc">Step through and run Arazzo workflows</p></div></a></li><li><a href="/rapipdf/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiPdf</span><span class="portal-card-badge">&lt;rapi-pdf&gt;</span></div><p class="portal-card-desc">Turn an OpenAPI spec into a PDF</p></div></a></li><li><a href="/rapi-mock/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2"/><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiMock</span><span class="portal-card-badge">rapidoc mock</span></div><p class="portal-card-desc">A mock server that validates requests and remembers</p></div></a></li><li><a href="/portal/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M104,104V208H40a8,8,0,0,1-8-8V104Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc Portal</span></div><p class="portal-card-desc">API references and guides as one site, with search and SSO</p></div></a></li></ul></section><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-1"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-1">Tools</h2><ul class="portal-megamenu-group-list"><li><a href="/cli/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M216,80V192H40V64H200A16,16,0,0,1,216,80Z" opacity="0.2"/><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">RapiDoc CLI</span><span class="portal-card-badge">rapidoc</span></div><p class="portal-card-desc">Preview, validate, lint, bundle and export OpenAPI specs</p></div></a></li><li><a href="/docs/mcp/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M200,56H56A24,24,0,0,0,32,80V192a24,24,0,0,0,24,24H200a24,24,0,0,0,24-24V80A24,24,0,0,0,200,56ZM164,184H92a20,20,0,0,1,0-40h72a20,20,0,0,1,0,40Z" opacity="0.2"/><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Zm4,28H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">MCP Server</span></div><p class="portal-card-desc">Turn your API into tools for AI agents</p></div></a></li><li><a href="/docs/prerender/" class="portal-megamenu-card"><div class="portal-card-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></div><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Pre-rendering</span></div><p class="portal-card-desc">Server-rendered HTML for search engines and a fast first paint</p></div></a></li></ul></section><section class="portal-megamenu-group" aria-labelledby="portal-menu-0-group-2"><h2 class="portal-megamenu-group-title" id="portal-menu-0-group-2">Integrations</h2><ul class="portal-megamenu-group-list"><li><a href="/integrations/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">All integrations</span></div></div></a></li><li><a href="/docs/integrations/front-end/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">React, Vue, Angular, Svelte</span></div></div></a></li><li><a href="/docs/integrations/node/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Hono, Express, Fastify</span></div></div></a></li><li><a href="/docs/integrations/docs-sites/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Starlight, VitePress, Docusaurus</span></div></div></a></li><li><a href="/docs/integrations/python/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Python (FastAPI, Starlette)</span></div></div></a></li><li><a href="/docs/integrations/dotnet/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">.NET (ASP.NET Core)</span></div></div></a></li><li><a href="/docs/integrations/go/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Go (net/http)</span></div></div></a></li><li><a href="/docs/integrations/build-your-own/" class="portal-megamenu-card portal-megamenu-card-compact"><div class="portal-card-body"><div class="portal-card-title-row"><span class="portal-card-title">Build an integration</span></div></div></a></li></ul></section></div><div class="portal-megamenu-footer"><a href="/docs/#which-package-do-i-need" class="portal-megamenu-footer-link"><span>Which package do I need?</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div></div></div><a href="/docs/" class="portal-nav-link">Docs</a><a href="/examples" class="portal-nav-link">Examples</a></nav><button type="button" class="portal-search-trigger" id="portal-search-btn" aria-label="Search ⌘K" aria-keyshortcuts="Meta+K Control+K /"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-search-icon"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"/></svg><span class="portal-search-text">Search</span><kbd class="portal-search-kbd">⌘K</kbd></button><div class="portal-nav-end"><nav class="portal-nav-menu portal-nav-menu-end" aria-label="More"><a href="https://github.com/rapi-doc/RapiDoc" class="portal-nav-link portal-nav-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-nav-link-icon"><path d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"/></svg>GitHub</a></nav><button type="button" class="portal-theme-btn" id="portal-theme-toggle" aria-label="Dark mode" aria-pressed="false"><span class="portal-theme-option portal-theme-light" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M116,36V20a12,12,0,0,1,24,0V36a12,12,0,0,1-24,0Zm80,92a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM48,128a12,12,0,0,0-12-12H20a12,12,0,0,0,0,24H36A12,12,0,0,0,48,128Zm80,80a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V220A12,12,0,0,0,128,208Zm108-92H220a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"/></svg></span><span class="portal-theme-option portal-theme-dark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M236.37,139.4a12,12,0,0,0-12-3A84.07,84.07,0,0,1,119.6,31.59a12,12,0,0,0-15-15A108.86,108.86,0,0,0,49.69,55.07,108,108,0,0,0,136,228a107.09,107.09,0,0,0,64.93-21.69,108.86,108.86,0,0,0,38.44-54.94A12,12,0,0,0,236.37,139.4Zm-49.88,47.74A84,84,0,0,1,68.86,69.51,84.93,84.93,0,0,1,92.27,48.29Q92,52.13,92,56A108.12,108.12,0,0,0,200,164q3.87,0,7.71-.27A84.79,84.79,0,0,1,186.49,187.14Z"/></svg></span></button><button type="button" class="portal-mobile-toggle" id="portal-mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="portal-mobile-drawer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button></div></div><!-- Row 2: section tabs --><!-- Mobile Drawer --><div class="portal-mobile-drawer" id="portal-mobile-drawer" hidden><div class="portal-mobile-nav"><nav class="portal-mobile-tabs" aria-label="Sections"><a href="/docs/rapidoc/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg><span>RapiDoc</span></a><a href="/docs/rapidoc-mini/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg><span>RapiDoc Mini</span></a><a href="/docs/rapipdf/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg><span>RapiPdf</span></a><a href="/docs/cli/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg><span>RapiDoc CLI</span></a><a href="/docs/mcp/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"/></svg><span>MCP Server</span></a><a href="/docs/prerender/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span>Pre-rendering</span></a><a href="/docs/integrations/" class="portal-mobile-tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M237.66,66.34a8,8,0,0,0-11.32,0L192,100.69,155.31,64l34.35-34.34a8,8,0,1,0-11.32-11.32L144,52.69,117.66,26.34a8,8,0,0,0-11.32,11.32L112.69,44l-53,53a40,40,0,0,0,0,56.57l15.71,15.71L26.34,218.34a8,8,0,0,0,11.32,11.32l49.09-49.09,15.71,15.71a40,40,0,0,0,56.57,0l53-53,6.34,6.35a8,8,0,0,0,11.32-11.32L203.31,112l34.35-34.34A8,8,0,0,0,237.66,66.34ZM147.72,185a24,24,0,0,1-33.95,0L71,142.23a24,24,0,0,1,0-33.95l53-53L200.69,132Z"/></svg><span>Integrations</span></a></nav><div class="portal-mobile-links-group"><div class="portal-mobile-section"><div class="portal-mobile-section-title">Products</div><div class="portal-mobile-links"><a href="/rapidoc/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"/></svg><span>RapiDoc</span></a><a href="/rapidoc-mini/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></svg><span>RapiDoc Mini</span></a><a href="/rapi-flow/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg><span>RapiFlow</span></a><a href="/rapipdf/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg><span>RapiPdf</span></a><a href="/rapi-mock/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg><span>RapiMock</span></a><a href="/portal/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z"/></svg><span>RapiDoc Portal</span></a><a href="/cli/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"/></svg><span>RapiDoc CLI</span></a><a href="/docs/mcp/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"/></svg><span>MCP Server</span></a><a href="/docs/prerender/" class="portal-mobile-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="portal-mobile-icon"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span>Pre-rendering</span></a><a href="/integrations/" class="portal-mobile-item"><span>All integrations</span></a><a href="/docs/integrations/front-end/" class="portal-mobile-item"><span>React, Vue, Angular, Svelte</span></a><a href="/docs/integrations/node/" class="portal-mobile-item"><span>Hono, Express, Fastify</span></a><a href="/docs/integrations/docs-sites/" class="portal-mobile-item"><span>Starlight, VitePress, Docusaurus</span></a><a href="/docs/integrations/python/" class="portal-mobile-item"><span>Python (FastAPI, Starlette)</span></a><a href="/docs/integrations/dotnet/" class="portal-mobile-item"><span>.NET (ASP.NET Core)</span></a><a href="/docs/integrations/go/" class="portal-mobile-item"><span>Go (net/http)</span></a><a href="/docs/integrations/build-your-own/" class="portal-mobile-item"><span>Build an integration</span></a></div></div><a href="/docs/" class="portal-mobile-direct-link">Docs</a><a href="/examples" class="portal-mobile-direct-link">Examples</a><a href="https://github.com/rapi-doc/RapiDoc" class="portal-mobile-direct-link portal-mobile-button" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></div></header><!-- Full-Text Search Modal (⌘K / Ctrl+K) --><div id="portal-search-modal" data-base="/" class="portal-search-modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Search Documentation"><div class="portal-search-modal-dialog"><div class="portal-search-modal-header"><span class="portal-search-modal-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></span><input type="search" class="portal-search-modal-input" placeholder="Search documentation, guides, and APIs..." aria-label="Search" autocomplete="off" spellcheck="false"><button class="portal-search-modal-close" aria-label="Close search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div><div class="portal-search-modal-filters"><button type="button" class="portal-search-filter-btn active" data-filter="all">All</button><button type="button" class="portal-search-filter-btn" data-filter="doc">Guides & Docs</button><button type="button" class="portal-search-filter-btn" data-filter="api">API Operations</button><button type="button" class="portal-search-filter-btn" data-filter="page">Pages</button></div><div class="portal-search-modal-body"><div class="portal-search-modal-results" role="listbox"></div><div class="portal-search-modal-empty hidden">No results found for "<span class="portal-search-empty-query"></span>"</div><div class="portal-search-modal-hint">Type keywords to search across guides, tutorials, and APIs...</div></div><div class="portal-search-modal-footer"><div class="portal-search-footer-hint"><kbd class="portal-kbd">↑</kbd><kbd class="portal-kbd">↓</kbd> <span>Navigate</span></div><div class="portal-search-footer-hint"><kbd class="portal-kbd">↵</kbd> <span>Select</span></div><div class="portal-search-footer-hint"><kbd class="portal-kbd">ESC</kbd> <span>Close</span></div></div></div></div><script>
+  (function () {
+    const modal = document.getElementById('portal-search-modal');
+    if (!modal) return;
+
+    const input = modal.querySelector('.portal-search-modal-input');
+    const closeBtn = modal.querySelector('.portal-search-modal-close');
+    const resultsContainer = modal.querySelector('.portal-search-modal-results');
+    const emptyState = modal.querySelector('.portal-search-modal-empty');
+    const emptyQuerySpan = modal.querySelector('.portal-search-empty-query');
+    const hintState = modal.querySelector('.portal-search-modal-hint');
+    const filterBtns = modal.querySelectorAll('.portal-search-filter-btn');
+
+    // Paths in the search index are relative to the portal; the portal may be served under a base path.
+    const base = (modal.dataset.base || '/').replace(/\/+$/, '');
+    const withBase = (url) => (url && url.startsWith('/') && !url.startsWith('//') ? base + url : url);
+
+    let searchRecords = null;
+    let isLoading = false;
+    let activeFilter = 'all';
+    let currentResults = [];
+    let selectedIndex = 0;
+
+    async function loadSearchIndex() {
+      if (searchRecords || isLoading) return;
+      isLoading = true;
+      try {
+        const candidateUrls = [withBase('/search-index.json')];
+        for (const url of candidateUrls) {
+          try {
+            const res = await fetch(url);
+            if (res.ok) {
+              const data = await res.json();
+              searchRecords = data.records || [];
+              showFiltersWithResults();
+              break;
+            }
+          } catch {}
+        }
+      } catch (err) {
+        console.warn('Failed to load search index:', err);
+      } finally {
+        isLoading = false;
+      }
+    }
+
+    // A filter is offered only for a kind of result the site has (a portal without APIs has no
+    // "API Operations"), and the row only when there is something to choose between.
+    function showFiltersWithResults() {
+      const kinds = new Set(searchRecords.map((record) => record.type));
+      filterBtns.forEach((btn) => {
+        const kind = btn.getAttribute('data-filter');
+        btn.hidden = kind !== 'all' && !kinds.has(kind);
+      });
+      const row = modal.querySelector('.portal-search-modal-filters');
+      if (row) row.hidden = kinds.size < 2;
+    }
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      loadSearchIndex();
+      setTimeout(() => {
+        if (input) {
+          input.focus();
+          if (input.value) {
+            performSearch(input.value);
+          }
+        }
+      }, 50);
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (input) input.value = '';
+      if (resultsContainer) resultsContainer.innerHTML = '';
+      if (emptyState) emptyState.classList.add('hidden');
+      if (hintState) hintState.classList.remove('hidden');
+      selectedIndex = 0;
+    }
+
+    // Keyboard trigger: ⌘K or Ctrl+K or / (when not typing in an input)
+    document.addEventListener('keydown', (e) => {
+      const isCmdK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
+      const isSlash = e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName);
+
+      if (isCmdK || isSlash) {
+        e.preventDefault();
+        if (modal.classList.contains('hidden')) {
+          openModal();
+        } else {
+          closeModal();
+        }
+      } else if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        e.preventDefault();
+        closeModal();
+      }
+    });
+
+    // Listen for search button click in header
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('#portal-search-btn, .portal-search-trigger')) {
+        e.preventDefault();
+        openModal();
+      }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter') || 'all';
+        if (input && input.value) {
+          performSearch(input.value);
+        }
+      });
+    });
+
+    function performSearch(query) {
+      const q = query.toLowerCase().trim();
+      if (!q) {
+        resultsContainer.innerHTML = '';
+        emptyState.classList.add('hidden');
+        hintState.classList.remove('hidden');
+        currentResults = [];
+        selectedIndex = 0;
+        return;
+      }
+
+      hintState.classList.add('hidden');
+
+      if (!searchRecords || !searchRecords.length) {
+        resultsContainer.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        if (emptyQuerySpan) emptyQuerySpan.textContent = query;
+        return;
+      }
+
+      // Words of the query: a result must have every one of them, in any of its fields
+      const tokens = q.split(/\s+/).filter(Boolean);
+      // A name written with hyphens is found without them, and the other way round ("rapidoc" and
+      // "rapi-doc" find the same things). A field with hyphens is searched in both spellings.
+      const foldHyphens = (text) => (text.includes('-') ? text + ' ' + text.replace(/-/g, '') : text);
+      const hasWord = (field, word) => {
+        if (field.includes(word)) return true;
+        const plain = word.replace(/-/g, '');
+        return plain !== word && plain.length > 0 && field.includes(plain);
+      };
+      const scored = [];
+
+      for (const record of searchRecords) {
+        if (activeFilter !== 'all' && record.type !== activeFilter) {
+          continue;
+        }
+
+        const titleLower = foldHyphens((record.title || '').toLowerCase());
+        const subtitleLower = foldHyphens((record.subtitle || '').toLowerCase());
+        const endpointLower = (record.endpoint || '').toLowerCase();
+        const methodLower = (record.method || '').toLowerCase();
+        const categoryLower = (record.category || '').toLowerCase();
+        const contentLower = foldHyphens((record.content || '').toLowerCase());
+
+        let score = 0;
+        let matchesAllTokens = true;
+
+        for (const token of tokens) {
+          let tokenMatched = false;
+          if (hasWord(titleLower, token)) {
+            score += titleLower.startsWith(token) ? 25 : 15;
+            tokenMatched = true;
+          }
+          if (hasWord(endpointLower, token)) {
+            score += endpointLower.startsWith(token) ? 20 : 12;
+            tokenMatched = true;
+          }
+          if (hasWord(subtitleLower, token)) {
+            score += 10;
+            tokenMatched = true;
+          }
+          if (methodLower === token) {
+            score += 15;
+            tokenMatched = true;
+          }
+          if (hasWord(categoryLower, token)) {
+            score += 8;
+            tokenMatched = true;
+          }
+          if (hasWord(contentLower, token)) {
+            score += 4;
+            tokenMatched = true;
+          }
+
+          if (!tokenMatched) {
+            matchesAllTokens = false;
+            break;
+          }
+        }
+
+        if (matchesAllTokens && score > 0) {
+          if (titleLower === q || endpointLower === q) score += 30;
+          scored.push({ ...record, score });
+        }
+      }
+
+      scored.sort((a, b) => b.score - a.score);
+      currentResults = scored.slice(0, 15);
+      selectedIndex = 0;
+      renderResults(currentResults, tokens, query);
+    }
+
+    function highlightText(text, tokens) {
+      if (!text) return '';
+      let escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      for (const token of tokens) {
+        if (!token) continue;
+        const re = new RegExp('(' + token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        escaped = escaped.replace(re, '<mark class="portal-search-match">$1</mark>');
+      }
+      return escaped;
+    }
+
+    function renderResults(results, tokens, query) {
+      resultsContainer.innerHTML = '';
+      if (!results.length) {
+        emptyState.classList.remove('hidden');
+        if (emptyQuerySpan) emptyQuerySpan.textContent = query;
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      results.forEach((item, idx) => {
+        const link = document.createElement('a');
+        link.href = withBase(item.url);
+        link.className = 'portal-search-result-item ' + (idx === selectedIndex ? 'selected' : '');
+        link.setAttribute('role', 'option');
+        link.setAttribute('data-index', idx);
+
+        let badgeHtml = '';
+        if (item.type === 'api' && item.method) {
+          const methodClass = 'method-' + item.method.toLowerCase();
+          badgeHtml = '<span class="portal-search-badge ' + methodClass + '">' + item.method + '</span>';
+        } else if (item.type === 'page') {
+          badgeHtml = '<span class="portal-search-badge badge-page">PAGE</span>';
+        } else {
+          badgeHtml = '<span class="portal-search-badge badge-doc">DOC</span>';
+        }
+
+        const titleHtml = highlightText(item.title, tokens);
+        const endpointHtml = item.endpoint
+          ? '<span class="portal-search-result-endpoint">' + highlightText(item.endpoint, tokens) + '</span>'
+          : '';
+        const snippetHtml = item.content ? highlightText(item.content.slice(0, 140) + '...', tokens) : '';
+
+        link.innerHTML =
+          '<div class="portal-search-result-header">' +
+          badgeHtml +
+          '<span>' + titleHtml + '</span>' +
+          endpointHtml +
+          '<span class="portal-search-result-category">' + (item.category || '') + '</span>' +
+          '</div>' +
+          (snippetHtml ? '<div class="portal-search-result-snippet">' + snippetHtml + '</div>' : '');
+
+        link.addEventListener('click', closeModal);
+        resultsContainer.appendChild(link);
+      });
+    }
+
+    function updateSelection(newIdx) {
+      const items = resultsContainer.querySelectorAll('.portal-search-result-item');
+      if (!items.length) return;
+      if (newIdx < 0) newIdx = items.length - 1;
+      if (newIdx >= items.length) newIdx = 0;
+      selectedIndex = newIdx;
+      items.forEach((it, i) => {
+        if (i === selectedIndex) {
+          it.classList.add('selected');
+          it.scrollIntoView({ block: 'nearest' });
+        } else {
+          it.classList.remove('selected');
+        }
+      });
+    }
+
+    if (input) {
+      input.addEventListener('input', (e) => performSearch(e.target.value));
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          updateSelection(selectedIndex + 1);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          updateSelection(selectedIndex - 1);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (currentResults[selectedIndex]) {
+            const url = currentResults[selectedIndex].url;
+            closeModal();
+            window.location.href = withBase(url);
+          }
+        }
+      });
+    }
+  })();
+</script><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Theme switcher: a toggle button, pressed while the dark theme is on
+    const themeBtn = document.getElementById('portal-theme-toggle');
+    if (themeBtn) {
+      const root = document.documentElement;
+      const sync = () => themeBtn.setAttribute('aria-pressed', String(root.getAttribute('data-theme') !== 'light'));
+      sync();
+      themeBtn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try {
+          localStorage.setItem('starlight-theme', next);
+        } catch {}
+        sync();
+      });
+    }
+
+    // 2. Announcement Dismissal
+    const closeAnnounce = document.getElementById('portal-announcement-close');
+    const announceBar = document.getElementById('portal-announcement');
+    if (closeAnnounce && announceBar) {
+      // The class hides the bar and sets --portal-banner-height to 0 (portal-theme.css).
+      closeAnnounce.addEventListener('click', () => {
+        document.documentElement.classList.add('portal-announcement-dismissed');
+        // Remembered across reloads and visits until the announcement changes.
+        try {
+          localStorage.setItem(`portal-announcement-dismissed:${announceBar.dataset.bannerKey}`, '1');
+        } catch {}
+      });
+    }
+
+    // 3. Search Trigger (⌘K)
+    const searchBtn = document.getElementById('portal-search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        const slSearch = document.querySelector('button[data-open-modal]');
+        if (slSearch) {
+          slSearch.click();
+        } else {
+          const rapiDoc = document.querySelector('rapi-doc');
+          if (rapiDoc && typeof rapiDoc.openSearchDialog === 'function') {
+            rapiDoc.openSearchDialog();
+          } else {
+            window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true, bubbles: true }));
+          }
+        }
+      });
+    }
+
+    // 4. Dropdown menus (WAI-ARIA disclosure navigation): the trigger button toggles its panel, and
+    // hovering opens it for the mouse. Keyboard: Enter/Space toggle, ArrowDown opens the menu and moves
+    // to the next link, ArrowUp/Home/End move between links, Escape closes the menu and returns to its
+    // trigger, and tabbing out closes it. ArrowLeft/ArrowRight move between the top-level items.
+    const navMenus = [...document.querySelectorAll('.portal-nav-menu')];
+    const wrappers = [...document.querySelectorAll('.portal-dropdown-wrapper')];
+    const triggerOf = (wrapper) => wrapper.querySelector('.portal-dropdown-trigger');
+    const isOpen = (wrapper) => wrapper.classList.contains('is-open');
+    const setOpen = (wrapper, open) => {
+      wrapper.classList.toggle('is-open', open);
+      triggerOf(wrapper).setAttribute('aria-expanded', String(open));
+    };
+    const closeAll = (except) => wrappers.forEach((wrapper) => wrapper !== except && setOpen(wrapper, false));
+
+    wrappers.forEach((wrapper) => {
+      const trigger = triggerOf(wrapper);
+      wrapper.addEventListener('mouseenter', () => closeAll(wrapper));
+      trigger.addEventListener('click', () => {
+        const open = !isOpen(wrapper);
+        closeAll(wrapper);
+        setOpen(wrapper, open);
+      });
+      wrapper.addEventListener('keydown', (e) => {
+        const links = [...wrapper.querySelectorAll('.portal-megamenu-panel a')];
+        const index = links.indexOf(document.activeElement);
+        let next;
+        if (e.key === 'Escape') {
+          if (!isOpen(wrapper)) return;
+          setOpen(wrapper, false);
+          trigger.focus();
+        } else if (e.key === 'ArrowDown') {
+          if (!isOpen(wrapper)) {
+            closeAll(wrapper);
+            setOpen(wrapper, true);
+          }
+          next = links[(index + 1) % links.length];
+        } else if (index !== -1 && e.key === 'ArrowUp') {
+          next = links[(index - 1 + links.length) % links.length];
+        } else if (index !== -1 && e.key === 'Home') {
+          next = links[0];
+        } else if (index !== -1 && e.key === 'End') {
+          next = links[links.length - 1];
+        } else {
+          return;
+        }
+        e.preventDefault();
+        next?.focus();
+      });
+      wrapper.addEventListener('focusout', (e) => {
+        if (!wrapper.contains(e.relatedTarget)) setOpen(wrapper, false);
+      });
+    });
+
+    navMenus.forEach((navMenu) => {
+      navMenu.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        const items = [...navMenu.querySelectorAll(':scope > a, :scope > .portal-dropdown-wrapper > .portal-dropdown-trigger')];
+        const index = items.indexOf(document.activeElement);
+        if (index === -1) return;
+        e.preventDefault();
+        items[(index + (e.key === 'ArrowRight' ? 1 : items.length - 1)) % items.length].focus();
+      });
+      navMenu.addEventListener('mouseleave', () => closeAll());
+      navMenu.querySelectorAll(':scope > a').forEach((link) => link.addEventListener('mouseenter', () => closeAll()));
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.portal-dropdown-wrapper')) closeAll();
+    });
+
+    // 5. Menu drawer (narrow screens without a sidebar): closes on Escape and when a link is chosen
+    const mobileBtn = document.getElementById('portal-mobile-menu-btn');
+    const mobileDrawer = document.getElementById('portal-mobile-drawer');
+    if (mobileBtn && mobileDrawer) {
+      const setDrawer = (open) => {
+        mobileDrawer.hidden = !open;
+        mobileBtn.setAttribute('aria-expanded', String(open));
+      };
+      mobileBtn.addEventListener('click', () => setDrawer(mobileDrawer.hidden));
+      mobileDrawer.addEventListener('click', (e) => {
+        if (e.target.closest('a')) setDrawer(false);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileDrawer.hidden) {
+          setDrawer(false);
+          mobileBtn.focus();
+        }
+      });
+    }
+  });
+</script><main class="rd-product-main astro-fjo3oda6"><header class="rd-hero-header astro-fjo3oda6"><div class="rd-badge-pill astro-fjo3oda6"><span class="rd-badge-pulse astro-fjo3oda6"></span><span class="rd-badge-text astro-fjo3oda6">rapidoc • @rapidoc/cli</span></div><h1 class="rd-page-title astro-fjo3oda6">RapiDoc <span class="text-gradient astro-fjo3oda6">CLI</span></h1><p class="rd-page-subtitle astro-fjo3oda6">One command for your OpenAPI spec, from the first edit to CI: preview it, check it, bundle it, print it, mock it and hand it to AI agents. The same command builds and serves developer portals.</p><div class="rd-hero-actions astro-fjo3oda6"><a href="/docs/cli/" class="rd-btn rd-btn-primary astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M232,44H160a43.86,43.86,0,0,0-32,13.85A43.86,43.86,0,0,0,96,44H24A12,12,0,0,0,12,56V200a12,12,0,0,0,12,12H96a20,20,0,0,1,20,20,12,12,0,0,0,24,0,20,20,0,0,1,20-20h72a12,12,0,0,0,12-12V56A12,12,0,0,0,232,44ZM96,188H36V68H96a20,20,0,0,1,20,20V192.81A43.79,43.79,0,0,0,96,188Zm124,0H160a43.71,43.71,0,0,0-20,4.83V88a20,20,0,0,1,20-20h60Z"/></svg><span class="astro-fjo3oda6">CLI Docs</span></a><a href="https://www.npmjs.com/package/@rapidoc/cli" class="rd-btn rd-btn-secondary astro-fjo3oda6" target="_blank" rel="noopener"><span class="astro-fjo3oda6">@rapidoc/cli on npm</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a></div><div class="rd-product-install astro-fjo3oda6"><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">terminal</span><button class="copy-btn astro-dymqotyw" data-code="npm install -D @rapidoc/cli
+
+npx rapidoc --help            # every command
+npx rapidoc validate --help   # one command's options and examples" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -D</span><span style="color:#9ECBFF"> @rapidoc/cli</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> rapidoc</span><span style="color:#79B8FF"> --help</span><span style="color:#6A737D">            # every command</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> rapidoc</span><span style="color:#9ECBFF"> validate</span><span style="color:#79B8FF"> --help</span><span style="color:#6A737D">   # one command's options and examples</span></span></code></pre></div></div><script type="module">document.querySelectorAll(`.copy-btn`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.getAttribute(`data-code`);if(t){await navigator.clipboard.writeText(t.trim());let n=e.querySelector(`.copy-text`);if(n){let e=n.textContent;n.textContent=`Copied!`,setTimeout(()=>{n.textContent=e},2e3)}}})});</script></div></header><section class="rd-section astro-fjo3oda6"><div class="rd-section-header rd-section-header--center astro-fjo3oda6"><div class="rd-section-badge astro-fjo3oda6">For Any Spec</div><h2 class="rd-section-title astro-fjo3oda6">Works on a Plain OpenAPI File</h2><p class="rd-section-desc astro-fjo3oda6">No portal needed: these commands take a file or a URL, and relative <code class="astro-fjo3oda6">$ref</code>s to other files work.</p></div><div class="rd-feature-grid astro-fjo3oda6"><a href="/docs/cli/preview/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Zm0,112a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z" opacity="0.2"/><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc preview</code></h3><p class="rd-feature-text astro-fjo3oda6">Shows a spec in <code>&lt;rapi-doc&gt;</code> and reloads it whenever a file in its folder changes.</p></a><a href="/docs/cli/validate/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M240,64V192a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V64A16,16,0,0,1,32,48H224A16,16,0,0,1,240,64Z" opacity="0.2"/><path d="M149.61,85.71l-89.6,88a8,8,0,0,1-11.22,0L10.39,136a8,8,0,1,1,11.22-11.41L54.4,156.79l84-82.5a8,8,0,1,1,11.22,11.42Zm96.1-11.32a8,8,0,0,0-11.32-.1l-84,82.5-18.83-18.5a8,8,0,0,0-11.21,11.42l24.43,24a8,8,0,0,0,11.22,0l89.6-88A8,8,0,0,0,245.71,74.39Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc validate</code></h3><p class="rd-feature-text astro-fjo3oda6">Checks a spec strictly against OpenAPI 2.0 to 3.2, with file, line and column for each error. JSON and SARIF output.</p></a><a href="/docs/cli/lint/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M176,112,74.34,213.66a8,8,0,0,1-11.31,0L42.34,193a8,8,0,0,1,0-11.31L144,80Z" opacity="0.2"/><path d="M248,152a8,8,0,0,1-8,8H224v16a8,8,0,0,1-16,0V160H192a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,248,152ZM56,72H72V88a8,8,0,0,0,16,0V72h16a8,8,0,0,0,0-16H88V40a8,8,0,0,0-16,0V56H56a8,8,0,0,0,0,16ZM184,192h-8v-8a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16ZM219.31,80,80,219.31a16,16,0,0,1-22.62,0L36.68,198.63a16,16,0,0,1,0-22.63L176,36.69a16,16,0,0,1,22.63,0l20.68,20.68A16,16,0,0,1,219.31,80Zm-54.63,32L144,91.31l-96,96L68.68,208ZM208,68.69,187.31,48l-32,32L176,100.69Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc lint</code></h3><p class="rd-feature-text astro-fjo3oda6">Rules for what a good reference needs: operationIds, summaries, examples, declared tags, security on writes.</p></a><a href="/docs/cli/bundle/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M224,80l-96,56L32,80l96-56Z" opacity="0.2"/><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc bundle</code></h3><p class="rd-feature-text astro-fjo3oda6">Joins a spec split over several files into one document, or dereferences it completely.</p></a><a href="/docs/cli/pdf/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc pdf</code></h3><p class="rd-feature-text astro-fjo3oda6">Writes the reference as a PDF, with RapiPdf: your title, colors, fonts and labels.</p></a><a href="/docs/cli/mock/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2"/><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc mock</code></h3><p class="rd-feature-text astro-fjo3oda6">Answers every operation over HTTP from examples or generated data, validates requests and checks OAuth tokens.</p></a><a href="/docs/cli/mcp/" class="rd-feature-card astro-fjo3oda6"><span class="rd-feature-icon astro-fjo3oda6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M200,56H56A24,24,0,0,0,32,80V192a24,24,0,0,0,24,24H200a24,24,0,0,0,24-24V80A24,24,0,0,0,200,56ZM164,184H92a20,20,0,0,1,0-40h72a20,20,0,0,1,0,40Z" opacity="0.2"/><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Zm4,28H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24Z"/></svg></span><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc mcp</code></h3><p class="rd-feature-text astro-fjo3oda6">Turns the spec into an MCP server for AI agents: export the project, or serve it over stdio.</p></a></div></section><section class="rd-section astro-fjo3oda6"><div class="rd-split astro-fjo3oda6"><div class="rd-split-text astro-fjo3oda6"><div class="rd-section-badge astro-fjo3oda6">In CI</div><h2 class="rd-section-title astro-fjo3oda6">Guard Every Pull Request</h2><p class="astro-fjo3oda6"><code class="astro-fjo3oda6">validate</code> and <code class="astro-fjo3oda6">lint</code> exit with code 1 on problems, and write SARIF for GitHub code scanning, so findings show up on the pull request. <code class="astro-fjo3oda6">bundle</code> and <code class="astro-fjo3oda6">pdf</code> produce files to publish next to your docs.</p><p class="astro-fjo3oda6">Piped, in CI or with <code class="astro-fjo3oda6">--yes</code>, the command never asks a question. In a terminal it asks for what the options don't say.</p></div><div class="code-wrapper astro-dymqotyw"><div class="code-header astro-dymqotyw"><span class="code-dot red astro-dymqotyw"></span><span class="code-dot yellow astro-dymqotyw"></span><span class="code-dot green astro-dymqotyw"></span><span class="code-title astro-dymqotyw">api.yml</span><button class="copy-btn astro-dymqotyw" data-code="# .github/workflows/api.yml, in a job's steps
+- run: npx rapidoc lint openapi.yaml --format sarif > lint.sarif
+- run: npx rapidoc bundle openapi.yaml -o dist/openapi.json
+- run: npx rapidoc pdf openapi.yaml -o dist/reference.pdf" title="Copy Code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" class="copy-icon astro-dymqotyw"><path d="M216,28H88A12,12,0,0,0,76,40V76H40A12,12,0,0,0,28,88V216a12,12,0,0,0,12,12H168a12,12,0,0,0,12-12V180h36a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28ZM156,204H52V100H156Zm48-48H180V88a12,12,0,0,0-12-12H100V52H204Z"/></svg><span class="copy-text astro-dymqotyw">Copy</span></button></div><div class="code-body astro-dymqotyw"><pre class="astro-code github-dark astro-dymqotyw" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#6A737D"># .github/workflows/api.yml, in a job's steps</span></span>
+<span class="line"><span style="color:#E1E4E8">- </span><span style="color:#85E89D">run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npx rapidoc lint openapi.yaml --format sarif > lint.sarif</span></span>
+<span class="line"><span style="color:#E1E4E8">- </span><span style="color:#85E89D">run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npx rapidoc bundle openapi.yaml -o dist/openapi.json</span></span>
+<span class="line"><span style="color:#E1E4E8">- </span><span style="color:#85E89D">run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npx rapidoc pdf openapi.yaml -o dist/reference.pdf</span></span></code></pre></div></div></div></section><section class="rd-section astro-fjo3oda6"><div class="rd-section-header rd-section-header--center astro-fjo3oda6"><div class="rd-section-badge astro-fjo3oda6">Developer Portals</div><h2 class="rd-section-title astro-fjo3oda6">The Same Command Runs Your Portal</h2><p class="rd-section-desc astro-fjo3oda6">A <a href="https://portal.rapidocui.com/" class="astro-fjo3oda6">RapiDoc Portal</a> puts your API references next to Markdown and Markdoc guides, with search and optional single sign-on. These commands create, build and serve it.</p></div><div class="rd-feature-grid rd-cli-portal-grid astro-fjo3oda6"><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc init</code></h3><p class="rd-feature-text astro-fjo3oda6">Creates a portal from your OpenAPI files.</p></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc dev</code></h3><p class="rd-feature-text astro-fjo3oda6">Runs it locally, reloading on every change.</p></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc build</code></h3><p class="rd-feature-text astro-fjo3oda6">Builds the static site.</p></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc serve</code></h3><p class="rd-feature-text astro-fjo3oda6">Serves the build with single sign-on and access rules.</p></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc migrate</code></h3><p class="rd-feature-text astro-fjo3oda6">Updates a portal&#39;s config to the current version.</p></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-feature-card astro-fjo3oda6" target="_blank" rel="noopener"><h3 class="rd-feature-title astro-fjo3oda6"><code class="astro-fjo3oda6">rapidoc doctor</code></h3><p class="rd-feature-text astro-fjo3oda6">Checks your setup and prints a report for bug reports.</p></a></div></section><section class="rd-next-steps astro-fjo3oda6"><h2 class="rd-section-title astro-fjo3oda6">Every Option, Every Command</h2><p class="rd-section-desc astro-fjo3oda6">The spec commands are documented here; the portal commands in the RapiDoc Portal docs.</p><div class="rd-hero-actions astro-fjo3oda6"><a href="/docs/cli/" class="rd-btn rd-btn-primary rd-btn-lg astro-fjo3oda6"><span class="astro-fjo3oda6">Command Line Docs</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a><a href="https://portal.rapidocui.com/docs/reference/cli/" class="rd-btn rd-btn-secondary rd-btn-lg astro-fjo3oda6" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,24V92H44V60ZM44,116H92v80H44Zm72,80V116h96v80Z"/></svg><span class="astro-fjo3oda6">Portal CLI Reference</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" class="astro-fjo3oda6"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a></div></section></main><!-- Each divided band spans the full width, so its rule runs edge to edge like the header's;
+     the content inside lines up with the header content. --><footer class="portal-footer-root print:hidden" data-portal-region="footer"><div class="portal-footer-band"><div class="portal-footer-container portal-footer-top" data-portal-region="footer-inner"><div class="portal-footer-brand-col"><a href="/" class="portal-footer-brand"><img src="/assets/images/rapidoc-lockup-light.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-light"><img src="/assets/images/rapidoc-lockup-dark.svg" alt="RapiDoc" class="portal-brand-img portal-brand-img-dark"></a><p class="portal-footer-desc">A web component for viewing OpenAPI 3.0, 3.1 and Swagger specifications, with an interactive console.</p></div><div class="portal-footer-columns"><div class="portal-footer-col"><h2 class="portal-footer-col-title">Products</h2><ul class="portal-footer-links"><li><a href="/rapidoc/" class="portal-footer-link">RapiDoc</a></li><li><a href="/rapidoc-mini/" class="portal-footer-link">RapiDoc Mini</a></li><li><a href="/rapi-flow/" class="portal-footer-link">RapiFlow</a></li><li><a href="/rapipdf/" class="portal-footer-link">RapiPdf</a></li><li><a href="/rapi-mock/" class="portal-footer-link">RapiMock</a></li><li><a href="/portal/" class="portal-footer-link">RapiDoc Portal</a></li><li><a href="/cli/" class="portal-footer-link">RapiDoc CLI</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Docs</h2><ul class="portal-footer-links"><li><a href="/docs/" class="portal-footer-link">All documentation</a></li><li><a href="/docs/rapidoc/" class="portal-footer-link">RapiDoc</a></li><li><a href="https://flow.rapidocui.com/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiFlow</a></li><li><a href="https://mock.rapidocui.com/docs/getting-started/introduction/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiMock</a></li><li><a href="https://portal.rapidocui.com/docs/getting-started/introduction/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">RapiDoc Portal</a></li><li><a href="/integrations/" class="portal-footer-link">Integrations</a></li><li><a href="/docs/mcp/" class="portal-footer-link">MCP Server</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Resources</h2><ul class="portal-footer-links"><li><a href="/examples/" class="portal-footer-link">Examples</a></li><li><a href="/sandbox/" class="portal-footer-link">Spec Sandbox</a></li><li><a href="/examples/controller-showcase/" class="portal-footer-link">Live Configurator</a></li><li><a href="/docs/rapidoc/migration/v13-to-v14/" class="portal-footer-link">Migration guides</a></li><li><a href="/tests/" class="portal-footer-link">Test Matrix</a></li><li><a href="/tests/performance/" class="portal-footer-link">Performance</a></li></ul></div><div class="portal-footer-col"><h2 class="portal-footer-col-title">Project</h2><ul class="portal-footer-links"><li><a href="https://github.com/rapi-doc/RapiDoc" class="portal-footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="https://github.com/rapi-doc/RapiDoc/releases" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Releases</a></li><li><a href="https://github.com/rapi-doc/RapiDoc/issues" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Issues</a></li><li><a href="https://www.npmjs.com/package/rapidoc" class="portal-footer-link" target="_blank" rel="noopener noreferrer">npm</a></li><li><a href="https://www.simafri.com/en/managed-vps/" class="portal-footer-link" target="_blank" rel="noopener noreferrer">Hosting by Simafri</a></li></ul></div></div></div></div><div class="portal-footer-container portal-footer-bottom"><div class="portal-footer-copy"><span>© 2026 Mrinmoy Majumdar. MIT licensed.</span></div><div class="portal-footer-social"><a href="https://github.com/rapi-doc/RapiDoc" class="portal-footer-social-link" aria-label="github" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg></a></div></div></footer></body></html>

@@ -1,0 +1,18 @@
+# Methods
+
+> Every JavaScript method of the <rapi-doc> element, read from the element's source.
+
+Called on the element, for example `document.querySelector('rapi-doc')`. How to use them is in [Control It from JavaScript](/docs/rapidoc/programmatic-api/lifecycle-and-methods/).
+
+```js
+const doc = document.querySelector('rapi-doc');
+
+await doc.loadSpec('https://rapidocui.com/specs/petstore.yaml');
+doc.setApiServer('https://petstore3.swagger.io/api/v3');
+doc.setApiKey('api_key', 'demo-key');
+doc.scrollToPath('get-/pet/{petId}');
+```
+
+<ElementReference tag="rapi-doc" section="filter" jumps={false} placeholder="Filter the methods of <rapi-doc>" />
+
+<ElementReference tag="rapi-doc" section="methods" />

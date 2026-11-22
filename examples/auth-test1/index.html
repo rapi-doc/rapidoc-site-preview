@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- Dark only; data-site-page marks the pages with the site's own layout for styles/portal.css --><html lang="en" data-theme="dark" data-site-page><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"><!-- Primary SEO Meta Tags --><title>Examples / Auth Test1 | RapiDoc</title><meta name="title" content="Examples / Auth Test1 | RapiDoc"><meta name="description" content="Interactive live example demonstrating Auth Test1 configuration and features in RapiDoc OpenAPI viewer."><meta name="keywords" content="OpenAPI, Swagger, API documentation, Web Component, OpenAPI 3.1, REST API, API Console, RapiDoc"><link rel="canonical" href="https://rapidocui.com/examples/auth-test1/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://rapidocui.com/examples/auth-test1/"><meta property="og:title" content="Examples / Auth Test1 | RapiDoc"><meta property="og:description" content="Interactive live example demonstrating Auth Test1 configuration and features in RapiDoc OpenAPI viewer."><meta property="og:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><meta property="og:site_name" content="RapiDoc"><!-- Twitter --><meta property="twitter:card" content="summary"><meta property="twitter:url" content="https://rapidocui.com/examples/auth-test1/"><meta property="twitter:title" content="Examples / Auth Test1 | RapiDoc"><meta property="twitter:description" content="Interactive live example demonstrating Auth Test1 configuration and features in RapiDoc OpenAPI viewer."><meta property="twitter:image" content="https://rapidocui.com/assets/images/rapidoc-leaves.png"><!-- Fonts: Inter and JetBrains Mono for the site; Lato, Nunito, Roboto Mono and Sono for the font demos --><!-- Fonts - START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sono:wght@200..800&display=swap" rel="stylesheet"><!-- Fonts - END --><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Mono&display=swap" rel="stylesheet"><!-- Google Analytics - START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-M9TPKERDJ6"></script><script>(function(){const gtagId = "G-M9TPKERDJ6";
+const pageTitle = "Examples / Auth Test1";
+const contentGroup = "Examples";
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var config = {};
+  if (pageTitle) {
+    config.page_title = pageTitle;
+  }
+  if (contentGroup) {
+    config.content_group = contentGroup;
+  }
+  gtag('config', gtagId, config);
+})();</script><!-- Google Analytics - END --><script type="module" src="/assets/rapidoc-min.js"></script><script>
+   function setApiServer(ev) {
+    const docEl = document.getElementById('thedoc');
+    const trEl = ev.target.closest('tr');
+    const serverUrl = trEl.querySelector('#server-url').value;
+    result = docEl.setApiServer(serverUrl);
+    ev.target.innerText = result ? 'Applied !' : 'Failed';
+    ev.target.style.backgroundColor = result ? 'green' : 'orangered';
+    window.setTimeout(function(){
+      ev.target.innerText = 'Apply';
+      ev.target.style.backgroundColor = '#2069e0';
+    }, 5000)
+  }
+
+  function clearSecurityKeys(ev) {
+    const docEl = document.getElementById('thedoc');
+    docEl.removeAllSecurityKeys();
+  }
+
+  function setSecurity(ev, securityType) {
+    const docEl = document.getElementById('thedoc');
+    const trEl = ev.target.closest('tr');
+    let result;
+    if (securityType === 'http') {
+      const securitySchemeId = trEl.querySelector('#http-security-scheme-id').value;
+      const username = trEl.querySelector('#http-username').value;
+      const password = trEl.querySelector('#http-password').value;
+      result = docEl.setHttpUserNameAndPassword(securitySchemeId, username, password);
+    } else if (securityType === 'apikey') {
+      const securitySchemeId = trEl.querySelector('#api-security-scheme-id').value;
+      const newApiToken = trEl.querySelector('#api-key-value').value;
+      result = docEl.setApiKey(securitySchemeId, newApiToken);
+    }
+    ev.target.innerText = result ? 'Applied !' : 'Failed';
+    ev.target.style.backgroundColor = result ? 'green' : 'orangered';
+    window.setTimeout(function(){
+      ev.target.innerText = 'Apply';
+      ev.target.style.backgroundColor = '#2069e0';
+    }, 5000)
+  }
+  </script><style>rapi-doc:not(:defined){opacity:0}a{color:var(--link-color);text-decoration:none}.txt{width:100px;font-size:12px;font-family:var(--rd-font-mono);border:1px solid var(--rd-accent);color:var(--rd-text-bright);border-radius:var(--rd-radius-xs);background-color:#333a;outline:none;margin:0 2px;padding:8px 12px}.btn{background:var(--rd-accent);color:var(--rd-text-bright);border-radius:var(--rd-radius-xs);cursor:pointer;border:none;outline:none;padding:8px 12px;font-size:13px;font-weight:700;line-height:normal;&.yellow{background:var(--color-yellow);color:#1e293b}&.small{width:60px;height:24px}&.medium{width:75px;height:28px}&.square{width:70px;height:70px;font-size:12px;line-height:normal}}.control-panel{background:#000a;border-bottom:1px solid #777;align-items:center;gap:5px;height:40px;padding:16px 12px;display:flex}
+.size:where(.astro-vdsjlspl){color:#fff;border-radius:2px;outline:none;width:100px;height:30px;margin:0 2px;padding:0 8px;font-size:13px}.txt:where(.astro-vdsjlspl){background-color:#2e2e2e;border:1px solid #2069e0}.table:where(.astro-vdsjlspl){border-collapse:collapse;border:1px solid #444}.table:where(.astro-vdsjlspl) td:where(.astro-vdsjlspl){border:1px solid #444;padding:8px;font-family:Roboto Mono;font-size:12px}.table:where(.astro-vdsjlspl) th:where(.astro-vdsjlspl){background:#222;border:1px solid #444;padding:8px;font-family:Open Sans;font-size:11px}datalist:where(.astro-vdsjlspl){background-color:#222;border:1px solid #2069e0}
+</style><link rel="stylesheet" href="/_rapidoc/assets/GoogleAnalytics.C5odW2gp.css"><link rel="stylesheet" href="/_rapidoc/assets/RapidocTuner.Cdfu-WWW.css"><script type="module" src="/_rapidoc/assets/cNngjUgL.js"></script></head><body><rapi-doc id="thedoc" spec-url="/specs/auth-test1.yaml" show-info="true" theme="dark" render-style="read" show-header="false" class="astro-vdsjlspl"><div slot="operations-top" class="astro-vdsjlspl"><div style="font-size:14px; border:0; background-color: #282828; border-radius:4px; padding:16px; margin:16px 75px" class="astro-vdsjlspl"><table class="astro-vdsjlspl"><tr class="astro-vdsjlspl"><td class="astro-vdsjlspl"> HTTP Basic</td><td class="astro-vdsjlspl"><input class="size txt astro-vdsjlspl" id="http-security-scheme-id" value="http-basic" type="text" placeholder="Security Scheme ID" spellcheck="false" style="width:120px"><input class="size txt astro-vdsjlspl" id="http-username" type="text" value="new-username" placeholder="User name" spellcheck="false"><input class="size txt astro-vdsjlspl" id="http-password" type="text" value="new-pwd" placeholder="Password" spellcheck="false"><button class="size btn astro-vdsjlspl" style="display: inline;" onclick="setSecurity(event, &quot;http&quot;)">Apply</button></td></tr><tr class="astro-vdsjlspl"><td class="astro-vdsjlspl"> API Key</td><td class="astro-vdsjlspl"><input class="size txt astro-vdsjlspl" id="api-security-scheme-id" value="api_key1" type="text" placeholder="Security Scheme ID" spellcheck="false" style="width:120px"><input class="size txt astro-vdsjlspl" id="api-key-value" type="text" value="new-token" placeholder="API Key Value" spellcheck="false"><button class="size btn astro-vdsjlspl" style="display: inline;" onclick="setSecurity(event, &quot;apikey&quot;)">Apply</button></td></tr><tr class="astro-vdsjlspl"><td colspan="2" class="astro-vdsjlspl"><button class="size btn astro-vdsjlspl" style="width:200px" onclick="clearSecurityKeys(event)">Clear all Keys</button></td></tr></table></div></div></rapi-doc></body></html>
